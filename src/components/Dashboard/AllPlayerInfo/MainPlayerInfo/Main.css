@@ -1,13 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 .mainPlayerInfoComponent {
-    width: 50rem;
+    width: 60rem;
     height: 22rem;
     background: #FFFFFF;
     border: 2px solid #EEEEF8;
     box-sizing: border-box;
     border-radius: 16px;
+    align-items: center;
 }
 
 .playerTitle {
+    display: inline-flex;
+    align-items: center;
     margin: 2rem;
 }
 
@@ -18,13 +23,58 @@
 
 .playerName {
     display: inline-block;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     margin-left: 1rem;
 }
 
 .countryIcon {
-    border-radius: 50%;
-    height: 5rem;
-    width: 5rem;
-    overflow: hidden;
+    /* border-radius: 50%; */
+    height: 2rem;
+    width: 2rem;
+    margin-left: 2.5rem;
+}
+
+.countryIconGerman {
+    /* border-radius: 50%; */
+    height: 2rem;
+    width: 2rem;
+    margin-left: 2.5rem;
+}
+
+.countryIconEurope {
+    /* border-radius: 50%; */
+    height: 2rem;
+    width: 2rem;
+    margin-left: 1rem;
+}
+
+.boxOfSomethingIdk {
+    display: inline-flex;
+    align-items: center;
+    background-color: #F3F3FA;
+    border-radius: 8px;
+    padding: 7px 13px;
+    margin-left: 1rem;
+}
+
+.textOfSomethingIdk {
+    opacity: 0.5;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.playerBasicInfo {
+    font-weight: 500;
+}
+
+.dateOfBirth {
+    display: inline-block;
+}
+
+.preferredFootBasic {
+    display: inline;
+}
+
+.height {
+    display: inline;
 }
