@@ -1,0 +1,27 @@
+{
+    "playerInfo": {
+        "dateOfBirth": "14/07/1995",
+        "country": "Germany",
+        "city": "Stuttgard",
+        "placeOfBirth": "Stuttgard, Germany",
+        "positions": "Center Forward",
+        "height":"190",
+        "preferredFoot":"Right",
+        "fullName": "Eran Zehavi"
+    },
+    "strengths": [
+        {"name": "Key Passes", "level":"Very Strong"},
+        {"name": "Finishing", "level":"Strong"}
+    ],
+    "weaknesses": [
+        {"name": "Aerial Duels", "level":"Weak"},
+        {"name": "Crossing", "level":"Weak"}
+    ],
+    "emotions": 80,
+    "composure": 50,
+    "relationships": [
+        {"connection": "Team", "level": 25},
+        {"connection": "Coach", "level": 50},
+        {"connection": "Management", "level": 25}
+    ]
+}

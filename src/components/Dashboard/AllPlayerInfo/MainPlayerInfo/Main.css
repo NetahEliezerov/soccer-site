@@ -1,0 +1,30 @@
+.mainPlayerInfoComponent {
+    width: 50rem;
+    height: 22rem;
+    background: #FFFFFF;
+    border: 2px solid #EEEEF8;
+    box-sizing: border-box;
+    border-radius: 16px;
+}
+
+.playerTitle {
+    margin: 2rem;
+}
+
+.playerLogo {
+    border-radius: 50%;
+    height: 5rem;
+}
+
+.playerName {
+    display: inline-block;
+    font-size: 1.75rem;
+    margin-left: 1rem;
+}
+
+.countryIcon {
+    border-radius: 50%;
+    height: 5rem;
+    width: 5rem;
+    overflow: hidden;
+}

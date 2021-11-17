@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.Nav {
+    background-color: #110E43;
+    list-style-type: none;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    width: 8.5rem;
+    height: 100%;
+    overflow: auto;
+}
+
+.navbarButton {
+    display: block;
+    padding: 8px 16px;
+    margin-left: auto;
+    margin-right: auto;
+    background: transparent;
+    border: none;
+    color: #fff;
+}
+
+.marginButtons {
+    margin: 10px 10px;
+    font-family: 'Lexend';
+}
+
+.activeNavbarBtn {
+    background-color: #4940D7;
+    width: 100%;
+}
