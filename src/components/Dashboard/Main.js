@@ -9,8 +9,10 @@ const MainDashboardPage = () => {
         <div>
             <MainNavbarComponent />
             <div class="outSideTheNavDash">
-                {/* <MainPlayersComponent /> */}
-                <MainPlayerInfo />
+                <MainPlayersComponent />
+                <div className="playerComponents">
+                    <MainPlayerInfo />
+                </div>
             </div>
         </div>
     )

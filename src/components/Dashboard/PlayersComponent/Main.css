@@ -1,6 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-.MainPlayersComponent {
-    font-family: 'Lexend';
+.mainPlayersComponent {
     background-color: #FBFBFF;
+    list-style-type: none;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    width: 19%;
+    height: 100%;
+    overflow: auto;
+}
+
+.playersNavTitle {
+    font-size: 2rem;
+    margin-bottom: 10%;
+}
+
+.playersTitle {
+    margin: 10%;
+}
+
+.searchPlayersNav {
+    background-image: url('https://i.imgur.com/rpMjaGh.png');
+    background-size: 1.45rem;
+    background-position-x: 1rem;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    padding: 12px 18px;
+    padding-left: 3rem;
+    width: 85%;
+    height: 80%;
+    border-radius: 8px;
+    border: 1px solid #E9E9F3;
+    box-sizing: border-box;
+}
+
+.searchPlayersNav:focus {
+    background: none;
 }
