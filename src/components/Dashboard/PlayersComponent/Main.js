@@ -41,7 +41,7 @@ const players = [{
         "positions": "Center Forward",
         "height":"190",
         "preferredFoot":"Right",
-        "fullName": "Eran Zehavi",
+        "fullName": "Cristiano Ronaldo",
         "image": '/assets/eranZehaviExam.jpeg',
         "id": "m1092v10"
     },
@@ -69,33 +69,32 @@ const MainPlayersComponent = () => {
     const handleSearchChange = (event) => {
         setUserSearchValue(String(event.target.value).toLowerCase());
         if(userSearchValue.length === 0 || userSearchValue === '') {
-            // newPlayersToShow.push(...players)
-            console.log(userSearchValue)
             setNewPlayersToShow(...players);
         } else {
-            // playersToShow = [];
+            
             setNewPlayersToShow([]);
-            const res = players.filter((e) => e.playerInfo.fullName.toLowerCase().startsWith(userSearchValue));
-            // playersToShow.push(players.filter((e) => e.playerInfo.fullName.toLowerCase().startsWith(userSearchValue)));
+            const res = players.filter((e) => e.playerInfo.fullName.toLowerCase().startsWith(userSearchValue.toLowerCase()));
+            
             if(res != []) {
                 setNewPlayersToShow(res);
             }
-            // console.log(newPlayersToShow);
-            // Object.keys(newPlayersToShow).forEach((e) => {
-            //     console.log(e);
-            // })
-            // Object.keys(newPlayersToShow).map((player) => console.log(player))
         };
     }
-    // Object.keys(newPlayersToShow).map((player) => console.log(player))
+    let TheElement = () => <div></div>;
 
+    if(Object.keys(newPlayersToShow).length !== 0 && Object.keys(newPlayersToShow).length < 5) {
+        TheElement = () => Object.keys(newPlayersToShow).map((player) => <MainPlayerComponent player={newPlayersToShow[parseInt(player)]} active={true} />);
+    }
+    if(userSearchValue.length === 0 || userSearchValue === '') {
+        TheElement = () => players.map((player) => <MainPlayerComponent player={player} active={true} />);
+    };
     return (
         <div className="mainPlayersComponent">
             <div className="playersTitle">
                 <h1 className="playersNavTitle">Players</h1>
                 <input className="searchPlayersNav" placeholder="Search" onChange={handleSearchChange} />
             </div>
-            {[...players.keys()].map((player) => <MainPlayerComponent player={players[player]} active={true} />)}
+            <TheElement />
         </div>
     )
 }
