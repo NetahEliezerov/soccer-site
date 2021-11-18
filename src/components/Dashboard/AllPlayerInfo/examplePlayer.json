@@ -1,6 +1,6 @@
 {
     "playerInfo": {
-        "dateOfBirth": "14/07/1995",
+        "dateOfBirth": [14, 7, 1995],
         "country": "Germany",
         "city": "Stuttgard",
         "placeOfBirth": "Stuttgard, Germany",

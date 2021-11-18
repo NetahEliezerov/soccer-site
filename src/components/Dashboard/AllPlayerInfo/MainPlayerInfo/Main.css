@@ -13,7 +13,7 @@
 .playerTitle {
     display: inline-flex;
     align-items: center;
-    margin: 2rem;
+    margin: 3%;
 }
 
 .playerLogo {
@@ -31,7 +31,7 @@
     /* border-radius: 50%; */
     height: 2rem;
     width: 2rem;
-    margin-left: 2.5rem;
+    margin-left: 2.5%;
 }
 
 .countryIconGerman {
@@ -64,17 +64,111 @@
 }
 
 .playerBasicInfo {
+    display: flex;
     font-weight: 500;
+    margin-left: 2rem;
+    margin-top: 1rem;
 }
 
-.dateOfBirth {
+.firstLine {
+    flex: 1;
+}
+
+.secondLine {
+    flex: 1;
+}
+
+.describingTextBasic {
+    font-size: 1.5rem;
+    font-weight: 500;
     display: inline-block;
 }
 
-.preferredFootBasic {
-    display: inline;
+
+
+
+
+
+.middleShapeHeight {
+    display: inline-block;
+    border: 1px dashed #E9E9F3;
+    width: 50%;
+    margin-left: 2%;
 }
 
-.height {
-    display: inline;
+.heightResult {
+    display: inline-block;
+    font-size: 1.25rem;
+    font-weight: normal;
+    margin-left: 1%;
+}
+
+
+
+
+.middleShapeFoot {
+    display: inline-block;
+    border: 1px dashed #E9E9F3;
+    width: 30%;
+    margin-left: 2%;
+}
+
+.footResult {
+    display: inline-block;
+    font-size: 1.25rem;
+    font-weight: normal;
+    margin-left: 1%;
+}
+
+
+
+
+.middleShapeDate {
+    display: inline-block;
+    border: 1px dashed #E9E9F3;
+    width: 22%;
+    margin-left: 2%;
+}
+
+.dateResult {
+    display: inline-block;
+    font-size: 1.25rem;
+    font-weight: normal;
+    margin-left: 1%;
+}
+
+
+
+
+
+
+.middleShapePlace {
+    display: inline-block;
+    border: 1px dashed #E9E9F3;
+    width: 10%;
+    margin-left: 2%;
+}
+
+.placeResult {
+    display: inline-block;
+    font-size: 1.25rem;
+    font-weight: normal;
+    margin-left: 1%;
+}
+
+
+
+
+.middleShapePositions {
+    display: inline-block;
+    border: 1px dashed #E9E9F3;
+    width: 30.5%;
+    margin-left: 2%;
+}
+
+.positionsResult {
+    display: inline-block;
+    font-size: 1.25rem;
+    font-weight: normal;
+    margin-left: 1%;
 }

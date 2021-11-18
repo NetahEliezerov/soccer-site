@@ -3,8 +3,10 @@ import countryCodes from '../countryCodes.json';
 import './Main.css';
 
 const MainPlayerInfo = (props) => {
+    const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     const currentCountryCode = countryCodes.find((e) => e[0] === props.info.playerInfo.country);
-    console.log(`/assets/4x3/${currentCountryCode[1]}.svg`)
+    
+    const trueDateOfBirth = `${props.info.playerInfo.dateOfBirth[0]} ${monthNames[props.info.playerInfo.dateOfBirth[1]]} ${props.info.playerInfo.dateOfBirth[2]}`
     return (
         <div className="mainPlayerInfoComponent">
             <div className="playerTitle">
@@ -18,14 +20,25 @@ const MainPlayerInfo = (props) => {
             </div>
             <div className="playerBasicInfo">
                 <div className="firstLine">
-                    <h2 className="dateOfBirth">Date of birth</h2>
-                    <h2 className="height">Height</h2>
-                    <h2 className="dateOfBirth">Place of birth</h2>
-                    <h2 className="positionsBasic">Positions</h2>
+                    <h2 className="dateOfBirth describingTextBasic">Date of birth</h2>
+                    <div className="middleShapeDate"></div>
+                    <h2 className="dateResult">{trueDateOfBirth}</h2>
+
+                    <h2 className="dateOfBirth describingTextBasic">Place of birth</h2>
+                    <div className="middleShapePlace"></div>
+                    <h2 className="placeResult">{props.info.playerInfo.placeOfBirth}</h2>
+
+                    <h2 className="positionsBasic describingTextBasic">Positions</h2>
+                    <div className="middleShapePositions"></div>
+                    <h2 className="positionsResult">{props.info.playerInfo.positions}</h2>
                 </div>
                 <div className="secondLine">
-                        <h2 className="dateOfBirth">Height</h2>
-                        <h2 className="preffe">Preferred Foot</h2>
+                        <h2 className="dateOfBirth describingTextBasic">Height</h2>
+                        <div className="middleShapeHeight"></div>
+                        <h2 className="heightResult">{props.info.playerInfo.height}</h2>
+                        <h2 className="prefferedFoot describingTextBasic">Preferred Foot</h2>
+                        <div className="middleShapeFoot"></div>
+                        <h2 className="footResult">{props.info.playerInfo.preferredFoot}</h2>
                 </div>
             </div>
         </div>
