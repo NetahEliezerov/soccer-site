@@ -1,0 +1,51 @@
+.playerStrengths {
+    width: 40rem;
+    background: #FFFFFF;
+    border: 2px solid #EEEEF8;
+    box-sizing: border-box;
+    border-radius: 16px;
+    align-items: center;
+    overflow: auto;
+}
+
+.strengthsTitleText {
+    margin: 5%;
+    font-size: 1.8rem;
+}
+
+.strengths {
+    margin-left: 5%;
+    font-size: 1.15rem;
+}
+
+.strengthName {
+    display: inline;
+}
+
+.middleShapeStrength {
+    display: inline;
+    border: 1px dashed #E9E9F3 !important;
+    width: auto;
+    overflow: hidden;
+    margin-left: 2%;
+    position: relative;
+}
+
+.strengthResult {
+    display: inline-block;
+    font-size: 1.25rem;
+    font-weight: normal;
+    margin-left: 1%;
+    float: right;
+    margin-right: 5%;
+}
+
+.divided {
+    display: flex;
+    margin-right: 5%;
+}
+  
+.divider {
+    flex-grow: 1;
+    border-bottom: 1px dashed #E9E9F3;
+}

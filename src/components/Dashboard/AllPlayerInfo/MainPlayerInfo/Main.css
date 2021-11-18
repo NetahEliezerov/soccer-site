@@ -74,10 +74,6 @@
     flex: 1;
 }
 
-.secondLine {
-    flex: 1;
-}
-
 .describingTextBasic {
     font-size: 1.5rem;
     font-weight: 500;
@@ -85,7 +81,7 @@
 }
 
 
-
+/* 
 
 
 
@@ -171,4 +167,36 @@
     font-size: 1.25rem;
     font-weight: normal;
     margin-left: 1%;
+} */
+
+.dividedPlayerInfo {
+    display: inline-flex;
+    margin-right: 5%;
+    width: 40%;
+    font-size: 1.2rem;
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+  
+.dividerPlayerInfo {
+    flex-grow: 1;
+    border-bottom: 1px dashed #E9E9F3;
+}
+
+.dividedPlayerInfo2 {
+    display: inline-flex;
+    margin-right: 5%;
+    width: 40%;
+    font-size: 1.2rem;
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+  
+.dividerPlayerInfo2 {
+    flex-grow: 1;
+    border-bottom: 1px dashed #E9E9F3;
+}
+
+.secondLine {
+    overflow: hidden;
 }
