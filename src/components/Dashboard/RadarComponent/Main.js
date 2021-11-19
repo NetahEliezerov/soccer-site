@@ -5,14 +5,36 @@ import { Radar } from 'react-chartjs-2';
 const data = {
     labels: [],
     datasets: [{
-      data: [],
-      fill: true,
-      backgroundColor: '#4940D7',
+        data: [],
+        fill: true,
+        backgroundColor: '#4940D7',
     }]
 };
 
-const legend = {
-    display: false
+const options = {
+    plugins: {
+        legend: {
+            display: false
+        }
+    },
+    scale: {
+        ticks: {
+            callback: function() {return ""},
+            backdropColor: "rgba(0, 0, 0, 0)",
+            maxTicksLimit: 1
+        },
+        pointLabels: {
+            font: {
+                family: "Lexend",
+                size: 12,
+            },
+        }
+    },
+    elements: {
+        point: {
+            pointRadius: 0
+        }
+    }
 };
 
 const RadarComponent = (props) => {
@@ -23,7 +45,7 @@ const RadarComponent = (props) => {
     }
     return (
         <div className={`subComponent ${props.size}`}>
-            <Radar data={getData()} options={{plugins: {legend} }}/>
+            <Radar data={getData()} options={options} />
         </div>
     )
 }

@@ -5,6 +5,7 @@ import PieComponent from '../PieComponent/PieComponent';
 import ListInfoComponent from '../ListInfo/Main';
 import RadarComponent from '../RadarComponent/Main';
 import { Container, Row, Col } from 'react-grid-system';
+import GaugeComponent from '../GaugeComponent/Main';
 
 const AllPlayerInfo = () => {
 
@@ -25,10 +26,18 @@ const AllPlayerInfo = () => {
             </Row>
             <Row style={{marginBottom: '3em'}}>
                 <Col>
-                    <RadarComponent info={examplePlayerInfo.characteristics} size="medium"/>
+                    <RadarComponent info={examplePlayerInfo.characteristics} size="small"/>
                 </Col>
                 <Col>
-                    <PieComponent size="medium"/>
+                    <PieComponent size="small"/>
+                </Col>
+            </Row>
+            <Row style={{marginBottom: '3em'}}>
+                <Col xs={6}>
+                    <GaugeComponent percent={examplePlayerInfo.emotions} size="small" title="Emotions" id="1"/>
+                </Col>
+                <Col xs={6}>
+                    <GaugeComponent percent={examplePlayerInfo.composure} size="small" title="Composure" id="1"/>
                 </Col>
             </Row>
         </Container>
