@@ -29,10 +29,11 @@
         {"connection": "Management", "level": 25}
     ],
     "characteristics": {
-        "Pressing Forward": 23,
-        "Shadow Striker": 23,
-        "Inside Forward": 56,
-        "Wide Playmaker": 51,
-        "Advanced Playmaker": 56
+        "Pressing Forward": 73,
+        "Shadow Striker": 83,
+        "Inside Forward": 96,
+        "Wide Playmaker": 81,
+        "Advanced Playmaker": 86,
+        "box-to-box": 100
     }
 }

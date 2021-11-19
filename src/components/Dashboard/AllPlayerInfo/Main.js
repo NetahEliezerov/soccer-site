@@ -6,6 +6,7 @@ import ListInfoComponent from '../ListInfo/Main';
 import RadarComponent from '../RadarComponent/Main';
 import { Container, Row, Col } from 'react-grid-system';
 import GaugeComponent from '../GaugeComponent/Main';
+import FormationComponent from '../FormationComponent/Main';
 
 const AllPlayerInfo = () => {
 
@@ -40,6 +41,7 @@ const AllPlayerInfo = () => {
                     <GaugeComponent percent={examplePlayerInfo.composure} size="small" title="Composure" id="1"/>
                 </Col>
             </Row>
+            <FormationComponent />
         </Container>
     )
 }

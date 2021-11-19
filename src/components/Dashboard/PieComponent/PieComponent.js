@@ -5,19 +5,26 @@ import { Pie } from 'react-chartjs-2';
 const data = {
     labels: ['Team', 'Management', 'Coach'],
     datasets: [
-      {
-        label: '# of Votes',
-        data: [12, 19, 3],
-        backgroundColor: [
-          '#110E43',
-          '#4940D7',
-          '#B5B0FF',
-        ],
-        borderWidth: 0,
-        
-      }
+        {
+            label: '# of Votes',
+            data: [12, 19, 3],
+            backgroundColor: [
+                '#110E43',
+                '#4940D7',
+                '#B5B0FF',
+            ],
+            borderWidth: 0
+        }
     ]
 };
+
+const labels = {
+    render: 'value',
+    fontSize: 14,
+    fontStyle: 'bold',
+    fontColor: '#000',
+    fontFamily: '"Lucida Console", Monaco, monospace'
+}
 
 const legend = {
     display: true,
@@ -39,8 +46,8 @@ const PieComponent = (props) => {
             <Pie className="pie"
                 width={350}
                 height={300}
-	            options={{ maintainAspectRatio: false, responsive: false, plugins: {legend} }}
-                data={data}/>
+                options={{ maintainAspectRatio: false, responsive: false, plugins: { legend, labels } }}
+                data={data} />
         </div>
     )
 }
