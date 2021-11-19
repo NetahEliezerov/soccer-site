@@ -1,3 +1,66 @@
 .pitch {
     height: 100%;
 }
+
+.subProgressBar {
+    width: 18.75em;
+    height: 0.55em;
+    background-color: #00F287;
+    border-radius: 10px;
+    animation: progressBarEnterAnimation 1000ms;
+}
+
+@keyframes progressBarEnterAnimation {
+    from {
+        width: 0;
+    }
+    to {
+        width: 18.75em;
+    }
+}
+
+.progressBar {
+    width: 37.5em;
+    height: 0.55em;
+    background-color: #F7F7F8;
+    border-radius: 10px;
+}
+
+.progressBarTitle {
+    display: inline;
+    font-weight: 400;
+}
+
+.teamWork {
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 4em;
+}
+
+.percentsOfProgressBar {
+    display: inline;
+    float:right;
+    font-weight: 400;
+}
+
+.pitchImg {
+    margin-left: 25%;
+    margin-bottom: 1em;
+}
+
+.selectionClass {
+    width: 37.5em;
+    height: 3em;
+    border-radius: 8px;
+    border-color: #E9E9F3;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    padding-left: 3.5%;
+}
+
+.selectionsDiv {
+    margin-left: 8%;
+    margin-bottom: 3em;
+}

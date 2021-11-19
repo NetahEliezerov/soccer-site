@@ -41,7 +41,7 @@ const AllPlayerInfo = () => {
                     <GaugeComponent percent={examplePlayerInfo.composure} size="small" title="Composure" id="1"/>
                 </Col>
             </Row>
-            <FormationComponent />
+            <FormationComponent size="medium" />
         </Container>
     )
 }
