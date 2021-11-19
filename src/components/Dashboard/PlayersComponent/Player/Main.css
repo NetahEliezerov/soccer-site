@@ -2,9 +2,18 @@
     display: inline-flex;
     width: 100%;
     height: 10%;
+    background-color: #FBFBFF;
+    vertical-align: middle;
+    /* border-bottom: 0.75px solid #808080; */
+}
+
+.playerListItemActive {
+    display: inline-flex;
+    width: 100%;
+    height: 10%;
     background-color: #ECECFF;
     vertical-align: middle;
-    border-bottom: 0.75px solid #808080;
+    /* border-bottom: 0.75px solid #808080; */
 }
 
 .playerListImg {

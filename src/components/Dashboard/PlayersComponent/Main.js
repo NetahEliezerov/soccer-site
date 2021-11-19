@@ -30,7 +30,8 @@ const players = [{
         {"connection": "Team", "level": 25},
         {"connection": "Coach", "level": 50},
         {"connection": "Management", "level": 25}
-    ]
+    ],
+    "active": true
 }, {
     "playerInfo": {
         "dateOfBirth": [14, 7, 1995],
@@ -59,7 +60,8 @@ const players = [{
         {"connection": "Team", "level": 25},
         {"connection": "Coach", "level": 50},
         {"connection": "Management", "level": 25}
-    ]
+    ],
+    "active": false
 }]
 
 const MainPlayersComponent = () => {
@@ -71,10 +73,8 @@ const MainPlayersComponent = () => {
         if(userSearchValue.length === 0 || userSearchValue === '') {
             setNewPlayersToShow(...players);
         } else {
-            
             setNewPlayersToShow([]);
-            const res = players.filter((e) => e.playerInfo.fullName.toLowerCase().startsWith(userSearchValue.toLowerCase()));
-            
+            const res = players.filter((player) => player.playerInfo.fullName.toLowerCase().includes(userSearchValue.toLowerCase()));
             if(res != []) {
                 setNewPlayersToShow(res);
             }
@@ -83,7 +83,7 @@ const MainPlayersComponent = () => {
     let TheElement = () => <div></div>;
 
     if(Object.keys(newPlayersToShow).length !== 0 && Object.keys(newPlayersToShow).length < 5) {
-        TheElement = () => Object.keys(newPlayersToShow).map((player) => <MainPlayerComponent player={newPlayersToShow[parseInt(player)]} active={true} />);
+        TheElement = () => Object.keys(newPlayersToShow).map((player) => <MainPlayerComponent player={newPlayersToShow[parseInt(player)]} />);
     }
     if(userSearchValue.length === 0 || userSearchValue === '') {
         TheElement = () => players.map((player) => <MainPlayerComponent player={player} active={true} />);

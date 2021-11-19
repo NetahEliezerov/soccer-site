@@ -7,10 +7,21 @@
 
 .subComponent {
     width: 60rem;
-    height: 22rem;
+    min-height: 22rem;
+    max-height: 25em;
+    height: fit-content;
     background: #FFFFFF;
     border: 2px solid #EEEEF8;
     box-sizing: border-box;
     border-radius: 16px;
     align-items: center;
+    overflow: scroll;
+}
+
+.small {
+    width: 30rem !important;
+}
+
+.large {
+    width: 60rem !important;
 }

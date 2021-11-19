@@ -5,7 +5,12 @@ const pages = [
     {
         nameOfPage: "Statistics",
         icon: '/assets/graph.png',
-        url: '/statistics'
+        url: '#statistics'
+    },
+    {
+        nameOfPage: "Events",
+        icon: '/assets/notification-status.png',
+        url: '#events'
     }
 ]
 
@@ -14,9 +19,9 @@ function MainNavbarComponent() {
         <div>
             <ul className="Nav">
                 {pages.map((page) => <li>
-                    <button className="navbarButton activeNavbarBtn">
-                        <img src={page.icon} /><br /><br />
-                        {page.nameOfPage}
+                    <button onClick={() => window.location.href = page.url} className="navbarButton activeNavbarBtn">
+                        <img src={page.icon} /><br />
+                        <span className="navbarItemTxt">{page.nameOfPage}</span>
                     </button>
                 </li>)}
             </ul>

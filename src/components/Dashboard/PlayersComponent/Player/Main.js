@@ -2,14 +2,25 @@ import React from 'react'
 import './Main.css';
 
 const MainPlayerComponent = (props) => {
-    if(!props.active) {
-        document.getElementById(props.player.playerInfo.id).style.backgroundColor = 'white';
+    const customId = props.player.playerInfo.id + '-Id'
+    let TheElement = () => <div className="playerListItem">
+        <img className="playerListImg" src={props.player.playerInfo.image} />
+        <h3 className="playerListName">{props.player.playerInfo.fullName}</h3>
+    </div>;
+
+    if(props.player.active) {
+        TheElement = () => <div className="playerListItemActive">
+        <img className="playerListImg" src={props.player.playerInfo.image} />
+        <h3 className="playerListName">{props.player.playerInfo.fullName}</h3>
+    </div>;
+        // document.getElementById(customId).style.backgroundColor = 'white';
     }
     return (
-        <div className="playerListItem" id={props.player.playerInfo.id}>
-            <img className="playerListImg" src={props.player.playerInfo.image} />
-            <h3 className="playerListName">{props.player.playerInfo.fullName}</h3>
-        </div>
+        <TheElement />
+        // <div className="playerListItem" id={customId}>
+        //     <img className="playerListImg" src={props.player.playerInfo.image} />
+        //     <h3 className="playerListName">{props.player.playerInfo.fullName}</h3>
+        // </div>
     )
 }
 
