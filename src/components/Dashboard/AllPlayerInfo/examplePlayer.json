@@ -1,6 +1,7 @@
 {
     "playerInfo": {
-        "dateOfBirth": [14, 7, 1995],
+        "imageSrc":"https://www.contactso.com/wp-content/uploads/2020/03/eran-zahavi-117.jpg",
+        "dateOfBirth": "09/12/1988",
         "country": "Germany",
         "city": "Stuttgard",
         "placeOfBirth": "Stuttgard, Germany",
@@ -8,7 +9,8 @@
         "positions": "Center Forward",
         "height":"190",
         "preferredFoot":"Right",
-        "fullName": "Eran Zehavi"
+        "fullName": "Eran Zehavi",
+        "shortenedPosition":"CF"
     },
     "strengths": [
         {"name": "Key Passes", "level":"Very Strong"},
@@ -24,5 +26,12 @@
         {"connection": "Team", "level": 25},
         {"connection": "Coach", "level": 50},
         {"connection": "Management", "level": 25}
-    ]
+    ],
+    "characteristics": {
+        "Pressing Forward": 23,
+        "Shadow Striker": 23,
+        "Inside Forward": 56,
+        "Wide Playmaker": 51,
+        "Advanced Playmaker": 56
+    }
 }
