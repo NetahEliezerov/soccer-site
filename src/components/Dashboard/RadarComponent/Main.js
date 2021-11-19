@@ -22,7 +22,7 @@ const RadarComponent = (props) => {
         return data;
     }
     return (
-        <div className="subComponent">
+        <div className={`subComponent ${props.size}`}>
             <Radar data={getData()} options={{plugins: {legend} }}/>
         </div>
     )

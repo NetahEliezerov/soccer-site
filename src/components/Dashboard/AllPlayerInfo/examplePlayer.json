@@ -15,13 +15,7 @@
     "strengths": [
         {"name": "Key Passes", "level":"Very Strong"},
         {"name": "Finishing", "level":"Stroncg"},
-        {"name": "Finishing", "level":"Strong"},
-        {"name": "Finishing", "level":"Stroncg"},
-        {"name": "Finishing", "level":"Stroncg"},
-        {"name": "Finishing", "level":"Stroncg"},
-        {"name": "Finishing", "level":"Stroncg"},
-        {"name": "Finishing", "level":"Stroncg"}
-        
+        {"name": "Finishing", "level":"Strong"}
     ],
     "weaknesses": [
         {"name": "Aerial Duels", "level":"Weak"},

@@ -9,13 +9,13 @@ import { Container, Row, Col } from 'react-grid-system';
 const AllPlayerInfo = () => {
 
     return (
-        <Container fluid>
-            <Row style={{height: '25em'}}>
+        <Container fluid style={{marginTop: '3em'}}>
+            <Row style={{marginBottom: '3em'}}>
                 <Col>
                     <MainPlayerInfo info={examplePlayerInfo} size="large"/>
                 </Col>
             </Row>
-            <Row style={{height: '25em'}}>
+            <Row style={{marginBottom: '3em'}}>
                 <Col>
                     <ListInfoComponent info={examplePlayerInfo.strengths} title="Strengths" size="small"/>
                 </Col>
@@ -23,12 +23,12 @@ const AllPlayerInfo = () => {
                     <ListInfoComponent info={examplePlayerInfo.weaknesses} title="Weaknesses" size="small"/>
                 </Col>
             </Row>
-            <Row style={{height: '25em'}}>
+            <Row style={{marginBottom: '3em'}}>
                 <Col>
-                    <RadarComponent info={examplePlayerInfo.characteristics}/>
+                    <RadarComponent info={examplePlayerInfo.characteristics} size="medium"/>
                 </Col>
                 <Col>
-                    <PieComponent />
+                    <PieComponent size="medium"/>
                 </Col>
             </Row>
         </Container>

@@ -34,7 +34,7 @@ const legend = {
 
 const PieComponent = (props) => {
     return (
-        <div className="subComponent">
+        <div className={`subComponent ${props.size}`}>
             <h3 className="header">Relationship</h3>
             <Pie className="pie"
                 width={350}
