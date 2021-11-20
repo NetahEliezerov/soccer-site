@@ -1,14 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-.mainPlayerInfoComponent {
-    width: 60rem;
-    min-height: 22rem;
-    height: fit-content;
-    background: #FFFFFF;
-    border: 2px solid #EEEEF8;
-    box-sizing: border-box;
-    border-radius: 16px;
-    align-items: center;
+.mainPlayerInfoDiv {
+    margin-top: 3em;
 }
 
 .playerTitle {
@@ -20,12 +13,15 @@
 .playerLogo {
     clip-path: circle();
     height: 5rem;
+    width: 5rem;
+    object-fit: contain;
 }
 
 .playerName {
     display: inline-block;
     font-size: 1.5rem;
     margin-left: 1rem;
+    width: 15rem;
 }
 
 .countryIcon {
