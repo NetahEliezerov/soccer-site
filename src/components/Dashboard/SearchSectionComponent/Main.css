@@ -9,6 +9,7 @@
     width: 19%;
     height: 100%;
     overflow: auto;
+    border-right: 2px solid #EEEEF8;
 }
 
 .playersNavTitle {
@@ -33,4 +34,11 @@
     border-radius: 8px;
     border: 1px solid #E9E9F3;
     box-sizing: border-box;
+}
+
+.mainDiv {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
 }

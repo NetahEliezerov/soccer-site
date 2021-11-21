@@ -41,11 +41,11 @@ const PieComponent = (props) => {
     };
     
     return (
-        <div className={`subComponent ${props.size}`}>
+        <div className="subComponent">
             <h3 className="header">{props.title}</h3>
             <Pie className="pie"
                 width={350}
-                height={300}
+                height={350}
                 options={{ maintainAspectRatio: false, responsive: false, plugins: { legend, labels } }}
                 data={data} />
         </div>

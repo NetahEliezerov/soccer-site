@@ -3,7 +3,7 @@ import './Main.css';
 
 const FormationComponent = (props) => {
     return (
-        <div className={`subComponent ${props.size}`}>
+        <div className="subComponent">
                 <h4 className="titleText">Tactics familiar with</h4>
                 <div className="selectionsDiv">
                     <label for="formations">Formations</label><br />

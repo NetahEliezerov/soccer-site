@@ -3,10 +3,11 @@
 }
 .playerComponents {
     margin-left: 25%;
+    margin-right: 10em;
+    margin-bottom: 10em;
 }
 
 .subComponent {
-    width: 60rem;
     height: fit-content;
     background: #FFFFFF;
     border: 2px solid #EEEEF8;
@@ -15,17 +16,4 @@
     align-items: center;
     overflow: auto;
     padding-bottom: 1rem;
-}
-
-.small {
-    width: 30rem !important;
-}
-
-.medium {
-    width: 45rem !important;
-    height: fit-content;
-}
-
-.large {
-    width: 100% !important;
 }
