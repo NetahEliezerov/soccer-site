@@ -22,13 +22,9 @@ const customStyles = {
     singleValue: (provided, state) => {
       const opacity = state.isDisabled ? 0.5 : 1;
       const transition = 'opacity 300ms';
-      return { ...provided, opacity, transition };
+      return { ...provided, opacity, transition, borderRadius: '10px' };
     },
-    menu: ({ width, ...css }) => ({ ...css }),
-    dropdownIndicator: base => ({
-        ...base,
-        color: "red" // Custom colour
-    })
+    menu: ({ width, ...css }) => ({ ...css })
 }
 
 const arraySelection = [
@@ -49,8 +45,8 @@ const FormationComponent = (props) => {
                 <h4 className="titleText">Tactics familiar with</h4>
                 <div className="selectionsDiv">
                     <label for="formations">Formations</label><br />
+                    <Select onChange={handleArrayChange} options={arraySelection} styles={customStyles} className="selectionClass" components={{ DropdownIndicator:() => null, IndicatorSeparator:() => null }} />
                 </div>
-                <Select onChange={handleArrayChange} options={arraySelection} styles={customStyles} className="selectionClass" components={{ DropdownIndicator:() => null, IndicatorSeparator:() => null }} />
                 {/* <Select components={{ DropdownIndicator:() => null, IndicatorSeparator:() => null }} className="selectionClass" styles={customStyles} options={arraySelection} /> */}
                 <div className="teamWork">
                     <h5 className="progressBarTitle">Teamwork</h5>
