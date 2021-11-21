@@ -15,6 +15,7 @@ const customStyles = {
       borderBottom: '1px solid #E9E9F3',
       color: state.isSelected ? 'white' : 'blue',
       padding: 20,
+      borderRadius: '10px',
       width: '31.4em'
     }),
     control: () => ({}),
