@@ -47,13 +47,12 @@ const FormationComponent = (props) => {
                     <label for="formations">Formations</label><br />
                     <Select onChange={handleArrayChange} options={arraySelection} styles={customStyles} className="selectionClass" components={{ DropdownIndicator:() => null, IndicatorSeparator:() => null }} />
                 </div>
-                {/* <Select components={{ DropdownIndicator:() => null, IndicatorSeparator:() => null }} className="selectionClass" styles={customStyles} options={arraySelection} /> */}
                 <div className="teamWork">
                     <h5 className="progressBarTitle">Teamwork</h5>
                     <h5 className="percentsOfProgressBar">50%</h5>
                     <div className="progressBar"><div className="subProgressBar" /></div>
                 </div>
-                <img className="pitchImg" src="/assets/pitch.svg"/>
+                <img className="pitchImg" src="./assets/pitch.svg"/>
         </div>
     )
 }
