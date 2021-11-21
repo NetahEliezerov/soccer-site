@@ -7,8 +7,8 @@ const MainPlayerInfo = (props) => {
             <div className="playerTitle">
                 <img src={props.info.playerInfo.imageSrc} className="playerLogo" />
                 <h1 className="playerName">{props.info.playerInfo.fullName}</h1>
-                <img src={`/assets/german.png`} className="countryIconGerman" />
-                <img src={`/assets/europe.png`} className="countryIconEurope" />
+                <img src={`./assets/german.png`} className="countryIconGerman" />
+                <img src={`./assets/europe.png`} className="countryIconEurope" />
                 <div className="boxOfSomethingIdk"><span className="textOfSomethingIdk">{props.info.playerInfo.shortenedPosition}</span></div>
             </div><br />
                     <p class="dividedPlayerInfo">

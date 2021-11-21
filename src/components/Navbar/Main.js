@@ -4,12 +4,12 @@ import './Main.css';
 const pages = [
     {
         nameOfPage: "Statistics",
-        icon: '/assets/graph.png',
+        icon: './assets/graph.png',
         url: '#statistics'
     },
     {
         nameOfPage: "Events",
-        icon: '/assets/notification-status.png',
+        icon: './assets/notification-status.png',
         url: '#events'
     }
 ]
