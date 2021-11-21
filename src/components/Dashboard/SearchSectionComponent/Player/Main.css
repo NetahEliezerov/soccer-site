@@ -5,6 +5,7 @@
     background-color: #FBFBFF;
     vertical-align: middle;
     cursor: pointer;
+    border-bottom: 2px solid #E9E9F3;
 }
 
 .playerListItemActive {
@@ -13,6 +14,7 @@
     height: 10%;
     background-color: #ECECFF;
     vertical-align: middle;
+    border-bottom: 2px solid #E9E9F3;
 }
 
 .playerListImg {
@@ -21,6 +23,7 @@
     margin-left: 2rem;
     margin-top: auto;
     margin-bottom: auto;
+    background-color: #CBE3FF;
 }
 
 .playerListName {
@@ -28,4 +31,14 @@
     margin-bottom: auto;
     font-size: 1.4rem;
     margin-left: 5%;
+}
+
+.text-active {
+    color: #060515;
+    font-weight: 600;
+}
+
+.text-non-active {
+    color: #060515;
+    font-weight: 400;
 }

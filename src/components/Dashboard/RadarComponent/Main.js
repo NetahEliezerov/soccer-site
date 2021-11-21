@@ -47,7 +47,7 @@ const RadarComponent = (props) => {
         <div className={`subComponent ${props.size}`}>
             <h3 className="header">Characteristics</h3>
             <div className="radarDiv">
-                <Radar data={getData()} options={options} />
+                <Radar data={getData()} redraw options={options} />
             </div>
         </div>
     )

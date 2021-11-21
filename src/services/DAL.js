@@ -40,7 +40,7 @@ const players = [
 },
 {
     "playerInfo": {
-        "imageSrc":"https://facesymmetry.fun/images/person/cristiano-ronaldo.jpg",
+        "imageSrc":"https://bet-bet.net/wp-content/uploads/2021/05/Cristiano-Ronaldo.png",
         "dateOfBirth": "09/12/1999",
         "country": "Portugal",
         "city": "Lisbon",
@@ -75,9 +75,50 @@ const players = [
         "Inside Forward": 96,
         "Wide Playmaker": 87,
         "Advanced Playmaker": 86,
-        "box-to-box": 99
+        "box-to-a": 70
     }
-}]
+},
+{
+    "playerInfo": {
+        "imageSrc":"https://bet-bet.net/wp-content/uploads/2021/05/Cristiano-Ronaldo.png",
+        "dateOfBirth": "09/12/1999",
+        "country": "Portugal",
+        "city": "Lisbon",
+        "placeOfBirth": "Lisbon, Portugal",
+        "mainland": "eu",
+        "positions": "Right Wing",
+        "height":"187",
+        "preferredFoot":"Right",
+        "fullName": "Cristiano Ronaldo",
+        "shortenedPosition":"RW"
+    },
+    "strengths": [
+        {"name": "Key Crosses", "level":"Strong"},
+        {"name": "Finishing", "level":"Strong"},
+        {"name": "Crossing", "level":"Medium"}
+    ],
+    "weaknesses": [
+        {"name": "Heading", "level":"Weak"},
+        {"name": "Passing", "level":"Weak"},
+        {"name": "Talking", "level":"Very Weak"}
+    ],
+    "emotions": 20,
+    "composure": 90,
+    "relationships": [
+        {"connection": "Team", "level": 70},
+        {"connection": "Coach", "level": 20},
+        {"connection": "Management", "level": 10}
+    ],
+    "characteristics": {
+        "Pressing Forward": 95,
+        "Shadow Striker": 90,
+        "Inside Forward": 96,
+        "Wide Playmaker": 87,
+        "Advanced Playmaker": 86,
+        "box-to-a": 70
+    }
+}
+]
 
 class DAL {
     constructor() {}

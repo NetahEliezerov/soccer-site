@@ -15,6 +15,7 @@
     height: 5rem;
     width: 5rem;
     object-fit: contain;
+    background-color: #CBE3FF;
 }
 
 .playerName {

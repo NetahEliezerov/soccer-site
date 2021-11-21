@@ -22,7 +22,7 @@ const SearchSectionComponent = (props) => {
         <div className="mainPlayersComponent">
             <div className="playersTitle">
                 <h1 className="playersNavTitle">Players</h1>
-                <input className="searchPlayersNav" placeholder="New Search" value={inputValue} onChange={event => updateInputValue(event.target.value)}/>
+                <input className="searchPlayersNav" placeholder="Search" value={inputValue} onChange={event => updateInputValue(event.target.value)}/>
             </div>
             {
                 getFilteredPlayers().map(player => (

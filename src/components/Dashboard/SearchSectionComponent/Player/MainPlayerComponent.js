@@ -10,7 +10,7 @@ const MainPlayerComponent = (props) => {
     return (
         <div onClick={selectedPlayer} className={props.active ? "playerListItemActive" : "playerListItem"}>
             <img className="playerListImg" src={props.player.playerInfo.imageSrc} />
-            <h3 className="playerListName">{props.player.playerInfo.fullName}</h3>
+            <h3 className={`playerListName ${props.active ? "text-active" : "text-non-active"}`}>{props.player.playerInfo.fullName}</h3>
         </div>
     )
 }

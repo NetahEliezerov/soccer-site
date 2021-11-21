@@ -21,20 +21,16 @@
 }
 
 .searchPlayersNav {
-    background-image: url('https://i.imgur.com/rpMjaGh.png');
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/0b/Search_Icon.svg');
     background-size: 1.45rem;
     background-position-x: 1rem;
     background-position-y: center;
     background-repeat: no-repeat;
-    padding: 12px 18px;
+    padding: 1em;
     padding-left: 3rem;
     width: 85%;
     height: 80%;
     border-radius: 8px;
     border: 1px solid #E9E9F3;
     box-sizing: border-box;
-}
-
-.searchPlayersNav:focus {
-    background: none;
 }
