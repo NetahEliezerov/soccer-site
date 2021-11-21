@@ -34,7 +34,8 @@ const options = {
         point: {
             pointRadius: 0
         }
-    }
+    },
+    maintainAspectRatio: false
 };
 
 const RadarComponent = (props) => {
@@ -44,10 +45,10 @@ const RadarComponent = (props) => {
         return data;
     }
     return (
-        <div className={`subComponent ${props.size}`}>
+        <div className="subComponent">
             <h3 className="header">Characteristics</h3>
             <div className="radarDiv">
-                <Radar data={getData()} redraw options={options} />
+                <Radar data={getData()} width={50} height={500} redraw options={options} />
             </div>
         </div>
     )
