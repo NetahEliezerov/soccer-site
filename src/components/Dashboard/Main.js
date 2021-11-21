@@ -1,17 +1,22 @@
 import React from 'react'
-import MainNavbarComponent from '../Navbar/Main'
-import MainPlayersComponent from './PlayersComponent/Main'
 import './Main.css';
+import MainNavbarComponent from '../Navbar/Main'
+import SearchSectionComponent from './SearchSectionComponent/SearchSectionComponent';
 import MainPlayerInfo from './AllPlayerInfo/Main';
+import DAL from '../../services/DAL';
+import { useState } from 'react';
 
 const MainDashboardPage = () => {
+
+    const [selectedPlayer, setSelectedPlayer] = useState(DAL.getPlayers()[0]);
+
     return (
         <div>
             <MainNavbarComponent />
             <div class="outSideTheNavDash">
-                <MainPlayersComponent />
+                <SearchSectionComponent setSelectedPlayer={setSelectedPlayer} activePlayer={selectedPlayer}/>
                 <div className="playerComponents">
-                    <MainPlayerInfo />
+                    <MainPlayerInfo player={selectedPlayer}/>
                 </div>
             </div>
         </div>

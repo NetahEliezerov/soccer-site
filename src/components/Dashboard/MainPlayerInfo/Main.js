@@ -3,7 +3,7 @@ import './Main.css';
 
 const MainPlayerInfo = (props) => {
     return (
-        <div className={`subComponent ${props.size}`}>
+        <div className={`subComponent ${props.size} mainPlayerInfoDiv`}>
             <div className="playerTitle">
                 <img src={props.info.playerInfo.imageSrc} className="playerLogo" />
                 <h1 className="playerName">{props.info.playerInfo.fullName}</h1>

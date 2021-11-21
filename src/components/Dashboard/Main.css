@@ -13,7 +13,7 @@
     box-sizing: border-box;
     border-radius: 16px;
     align-items: center;
-    overflow: scroll;
+    overflow: auto;
     padding-bottom: 1rem;
 }
 
