@@ -9,7 +9,7 @@ import { Grid } from '@mui/material';
 const AllPlayerInfo = (props) => {
 
     return (
-        <Grid container spacing={2}>
+        <Grid container>
             <Grid item xs={12}>
                 <MainPlayerInfo info={props.player} />
             </Grid>
