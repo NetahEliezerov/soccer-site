@@ -33,13 +33,19 @@ const arraySelection = [
 ]
 
 const FormationComponent = (props) => {
+    const [teamWorkPercents, setTeamWorkPercents] = useState(`${props.teamWork[0].teamWork}%`);
     const [selectedArray, setSelectedArray] = useState('');
 
     const handleArrayChange = (event) => {
+        const foundFormation = props.teamWork.filter((e) => e.formation == selectedArray && console.log(e)).formation;
+        // console.log(foundFormation);
         setSelectedArray(event.value);
-        console.log(event.value)
+        setTeamWorkPercents(`${foundFormation}%`);
+        // console.log(teamWorkPercents)
+        document.getElementById('progressBar').style.width = teamWorkPercents;
     }
 
+    document.documentElement.style.setProperty('--w', teamWorkPercents)
     return (
         <div className="subComponent">
                 <h4 className="titleText">Tactics familiar with</h4>
@@ -49,8 +55,8 @@ const FormationComponent = (props) => {
                 </div>
                 <div className="teamWork">
                     <h5 className="progressBarTitle">Teamwork</h5>
-                    <h5 className="percentsOfProgressBar">50%</h5>
-                    <div className="progressBar"><div className="subProgressBar" /></div>
+                    <h5 className="percentsOfProgressBar">{teamWorkPercents}</h5>
+                    <div className="progressBar"><div className="subProgressBar" id="progressBar" style={{width: teamWorkPercents}}/></div>
                 </div>
                 <img className="pitchImg" src="./assets/pitch.svg"/>
         </div>

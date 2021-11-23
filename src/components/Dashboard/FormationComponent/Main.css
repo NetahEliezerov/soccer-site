@@ -3,11 +3,11 @@
 }
 
 .subProgressBar {
-    width: 18.75em;
     height: 0.55em;
     background-color: #00F287;
     border-radius: 10px;
     animation: progressBarEnterAnimation 1000ms;
+    transition-duration: 750ms;
 }
 
 @keyframes progressBarEnterAnimation {
@@ -15,7 +15,7 @@
         width: 0;
     }
     to {
-        width: 50%;
+        width: var(--w, 100%);
     }
 }
 

@@ -7,7 +7,6 @@ import GaugeComponent from '../GaugeComponent/Main';
 import FormationComponent from '../FormationComponent/Main';
 import { Grid } from '@mui/material';
 const AllPlayerInfo = (props) => {
-
     return (
         <Grid container spacing={2}>
             <Grid item xs={12}>
@@ -29,7 +28,7 @@ const AllPlayerInfo = (props) => {
             </Grid>
             <Grid container item xs={12}>
                 <Grid item xs={5}>
-                    <FormationComponent size="medium" />
+                    <FormationComponent teamWork={props.player.teamwork} size="medium" />
                 </Grid>
                 <Grid item xs={1} />
                 <Grid container item xs={6}>
