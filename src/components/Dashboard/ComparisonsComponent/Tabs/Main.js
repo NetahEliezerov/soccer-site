@@ -1,84 +1,77 @@
 import React from 'react';
 import { Box, createTheme, Tab, Tabs, Typography } from '@mui/material';
-import {withStyles} from '@mui/styles';
+import { withStyles } from '@mui/styles';
 import PropTypes from 'prop-types';
 import './Main.css';
 
 const theme = createTheme({
-    palette: {
-      primary: {
-        main: '#0052cc',
-      },
-      secondary: {
-        main: '#edf2ff',
-      },
+  palette: {
+    primary: {
+      main: '#0052cc',
     },
-  });
+    secondary: {
+      main: '#edf2ff',
+    },
+  },
+});
 
 function TabPanel(props) {
-    const { children, value, index, ...other } = props;
-  
-    return (
-      <div
-        role="tabpanel"
-        hidden={value !== index}
-        id={`simple-tabpanel-${index}`}
-        aria-labelledby={`simple-tab-${index}`}
-        {...other}
-      >
-        {value === index && (
-          <Box sx={{ p: 3 }}>
-            <Typography>{children}</Typography>
-          </Box>
-        )}
-      </div>
-    );
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box sx={{ p: 3 }}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
 }
 const styles = theme => ({
-    indicator: {
-      backgroundColor: 'white',
-    },
-}) 
+  indicator: {
+    backgroundColor: 'white',
+  },
+})
 TabPanel.propTypes = {
-    children: PropTypes.node,
-    index: PropTypes.number.isRequired,
-    value: PropTypes.number.isRequired,
+  children: PropTypes.node,
+  index: PropTypes.number.isRequired,
+  value: PropTypes.number.isRequired,
 };
 
 const CustomTab = withStyles({
-    root: {
-      textTransform: "none",
-      marginLeft: 'auto',
-      marginRight: 'auto'
-    }
+  root: {
+    textTransform: "none",
+    marginLeft: 'auto',
+    marginRight: 'auto'
+  }
 })(Tab);
 
 const MainTabsComponent = (props) => {
-    const [value, setValue] = React.useState('1');
-    console.log(props.titles)
-    const titles = [];
+  const [selectedTab, setSelectedTab] = React.useState('1');
 
-    props.titles.forEach((title, titleIdx) => {
-        console.log(title, titleIdx)
-        titles.push([title, titleIdx]);
-    });
+  const handleChange = (_, newValue) => {
+    setSelectedTab(newValue);
+  };
 
-    
-
-    const handleChange = (event, newValue) => {
-        setValue(newValue);
-    };
-    console.log(titles)
-    return (
-        <div className={`subComponent tabsComponent`}>
-            <Box sx={{ border: '2px solid #EDECF3' }}>
-                <Tabs value={value} onChange={handleChange} TabIndicatorProps={{style: {background:'#110E43'}}} aria-label="basic tabs example">
-                    {titles.map((title) => <CustomTab style={{color: '#110E43', fontFamily: 'Lexend'}} label={title[0]} value={title[1]} />)}
-                </Tabs>
-            </Box>
-            {titles.map((title) => <TabPanel value={value} index={title[1]}>{title[0]}</TabPanel>)}
-        </div>
-    )
+  return (
+    <div className={`subComponent tabsComponent`}>
+      <Box sx={{ border: '2px solid #EDECF3' }}>
+        <Tabs value={selectedTab} onChange={handleChange} TabIndicatorProps={{ style: { background: '#110E43' } }} aria-label="basic tabs example">
+          {props.tabs.map((tab, index) => <CustomTab style={{ color: '#110E43', fontFamily: 'Lexend' }} label={tab.title} value={index} />)}
+        </Tabs>
+      </Box>
+      {props.tabs.map((tab, index) => <TabPanel value={selectedTab} index={index}>
+        The title is: {tab.title}
+      </TabPanel>)}
+    </div>
+  )
 }
 
 export default MainTabsComponent

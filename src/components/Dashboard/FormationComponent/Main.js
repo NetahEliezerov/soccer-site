@@ -1,13 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import './Main.css';
-import Select from 'react-select'
-
-const options = [
-    { value: 'chocolate', label: 'Chocolate' },
-    { value: 'strawberry', label: 'Strawberry' },
-    { value: 'vanilla', label: 'Vanilla' }
-]
+import Select from 'react-select';
 
 const customStyles = {
     option: (provided, state) => ({
@@ -38,10 +32,8 @@ const FormationComponent = (props) => {
 
     const handleArrayChange = (event) => {
         const foundFormation = props.teamWork.filter((e) => e.formation == selectedArray && console.log(e)).formation;
-        // console.log(foundFormation);
         setSelectedArray(event.value);
         setTeamWorkPercents(`${foundFormation}%`);
-        // console.log(teamWorkPercents)
         document.getElementById('progressBar').style.width = teamWorkPercents;
     }
 
@@ -58,7 +50,7 @@ const FormationComponent = (props) => {
                     <h5 className="percentsOfProgressBar">{teamWorkPercents}</h5>
                     <div className="progressBar"><div className="subProgressBar" id="progressBar" style={{width: teamWorkPercents}}/></div>
                 </div>
-                <img className="pitchImg" src="./assets/pitch.svg"/>
+                <img className="pitchImg" src={process.env.PUBLIC_URL + '/assets/pitch.svg'} />
         </div>
     )
 }

@@ -4,13 +4,13 @@ import './Main.css';
 const pages = [
     {
         nameOfPage: "Statistics",
-        icon: './assets/statistics.svg',
+        icon: `${process.env.PUBLIC_URL}/assets/statistics.svg`,
         url: '#statistics',
         isSelected: true
     },
     {
         nameOfPage: "Events",
-        icon: './assets/events.svg',
+        icon: `${process.env.PUBLIC_URL}/assets/events.svg`,
         url: '#events'
     }
 ]

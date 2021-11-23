@@ -4,7 +4,6 @@
 .playerComponents {
     margin-left: 25%;
     margin-right: 10em;
-    /* margin-bottom: 10em; */
 }
 
 .subComponent {
@@ -16,4 +15,9 @@
     align-items: center;
     overflow: auto;
     padding-bottom: 1rem;
+}
+
+.titleText {
+    margin: 1.5em;
+    font-size: 1.8rem;
 }

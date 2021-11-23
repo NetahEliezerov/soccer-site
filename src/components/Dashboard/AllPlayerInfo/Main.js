@@ -7,48 +7,65 @@ import GaugeComponent from '../GaugeComponent/Main';
 import FormationComponent from '../FormationComponent/Main';
 import { Grid } from '@mui/material';
 import MainTabsComponent from '../ComparisonsComponent/Tabs/Main';
+import { PickComparisonsComponent } from '../PickComparisonsComponent/PickComparisonsComponent';
+import DAL from '../../../services/DAL';
+
 const AllPlayerInfo = (props) => {
+
     return (
-        <Grid container>
+        <Grid container spacing={3}>
             <Grid item xs={12}>
                 <MainPlayerInfo info={props.player} />
             </Grid>
-            <Grid container item xs={12}>
-                <Grid item xs={5}>
-                    <RadarComponent info={props.player.characteristics} />
-                </Grid>
-                <Grid item xs={1} />
-                <Grid container item xs={6} rowSpacing={2}>
-                    <Grid item xs={12}>
-                        <ListInfoComponent info={props.player.strengths} title="Strengths" />
-                    </Grid>
-                    <Grid item xs={12}>
-                        <ListInfoComponent info={props.player.weaknesses} title="Weaknesses" />
-                    </Grid>
-                </Grid>
+            <Grid item xs={12}>
+                <PickComparisonsComponent comparingPlayers={DAL.getPlayers()} />
             </Grid>
-            <Grid container item xs={12}>
-                <Grid item xs={5}>
-                    <FormationComponent teamWork={props.player.teamwork} size="medium" />
-                </Grid>
-                <Grid item xs={1} />
-                <Grid container item xs={6}>
-                    <Grid item xs={6}>
-                        <GaugeComponent percent={props.player.emotions} title="Emotions" id="1" />
+            {
+                props.compareMode && (
+                    <Grid container item xs={12}> 
+                    {/* , 'Tactics familiar', 'Strengths & Weaknesses', 'Emotions & Composure', 'Relationship' */}
+                    <MainTabsComponent tabs={[{key: 'characteristics', title: 'Characteristics'}]} />
+                </Grid> 
+            )}
+            {
+                !props.compareMode && (
+                    <Grid container item xs={12}>
+                        <Grid item xs={5}>
+                            <RadarComponent info={props.player.characteristics} />
+                        </Grid>
+                        <Grid item xs={1} />
+                        <Grid container item xs={6} rowSpacing={2}>
+                            <Grid item xs={12}>
+                                <ListInfoComponent info={props.player.strengths} title="Strengths" />
+                            </Grid>
+                            <Grid item xs={12}>
+                                <ListInfoComponent info={props.player.weaknesses} title="Weaknesses" />
+                            </Grid>
+                        </Grid>
                     </Grid>
-                    <Grid item xs={6}>
-                        <GaugeComponent percent={props.player.composure} title="Composure" id="1" />
+                )}
+            {
+                !props.compareMode && (
+                    <Grid container item xs={12}>
+                        <Grid item xs={5}>
+                            <FormationComponent teamWork={props.player.teamwork} size="medium" />
+                        </Grid>
+                        <Grid item xs={1} />
+                        <Grid container item xs={6}>
+                            <Grid item xs={6}>
+                                <GaugeComponent percent={props.player.emotions} title="Emotions" id="1" />
+                            </Grid>
+                            <Grid item xs={6}>
+                                <GaugeComponent percent={props.player.composure} title="Composure" id="1" />
+                            </Grid>
+                            <Grid item xs={12}>
+                                <PieComponent info={props.player.relationships} title="Relationships" />
+                            </Grid>
+                            <Grid item xs={12}>
+                            </Grid>
+                        </Grid>
                     </Grid>
-                    <Grid item xs={12}>
-                        <PieComponent info={props.player.relationships} title="Relationships" />
-                    </Grid>
-                    <Grid item xs={12}>
-                    </Grid>
-                </Grid>
-            </Grid>
-            <Grid container item xs={12}>
-                <MainTabsComponent titles={['Characteristic', 'Tactics familiar', 'Strengths & Weaknesses', 'Emotions & Composure', 'Relationship']} size="large"/>
-            </Grid>
+                )}
         </Grid>
     )
 }

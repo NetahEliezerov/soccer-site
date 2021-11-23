@@ -91,7 +91,7 @@ const players = [
 },
 {
     "playerInfo": {
-        "imageSrc":"https://bet-bet.net/wp-content/uploads/2021/05/Cristiano-Ronaldo.png",
+        "imageSrc":"https://i.goalzz.com/?i=ashraf-zamrani%2Flionelmessi.gif",
         "dateOfBirth": "09/12/1999",
         "country": "Portugal",
         "city": "Lisbon",
@@ -100,7 +100,7 @@ const players = [
         "positions": "Right Wing",
         "height":"187",
         "preferredFoot":"Right",
-        "fullName": "Cristiano Ronaldo",
+        "fullName": "Lionel Messi",
         "shortenedPosition":"RW"
     },
     "strengths": [
