@@ -73,7 +73,7 @@ const MainTabsComponent = (props) => {
         <div className={`subComponent tabsComponent`}>
             <Box sx={{ border: '2px solid #EDECF3' }}>
                 <Tabs value={value} onChange={handleChange} TabIndicatorProps={{style: {background:'#110E43'}}} aria-label="basic tabs example">
-                    {titles.map((title) => <CustomTab label={title[0]} value={title[1]} />)}
+                    {titles.map((title) => <CustomTab style={{color: '#110E43', fontFamily: 'Lexend'}} label={title[0]} value={title[1]} />)}
                 </Tabs>
             </Box>
             {titles.map((title) => <TabPanel value={value} index={title[1]}>{title[0]}</TabPanel>)}
