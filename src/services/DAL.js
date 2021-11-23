@@ -24,6 +24,16 @@ const players = [
     ],
     "emotions": 80,
     "composure": 50,
+    "teamwork": [
+        {
+            'formation': '5-4-2-1',
+            'teamWork': 80
+        },
+        {
+            'formation': '2-1-4-5',
+            'teamWork': 20
+        },
+    ],
     "relationships": [
         {"connection": "Team", "level": 25},
         {"connection": "Coach", "level": 50},
@@ -63,6 +73,7 @@ const players = [
         {"name": "Talking", "level":"Very Weak"}
     ],
     "emotions": 20,
+    "teamwork": 30,
     "composure": 90,
     "relationships": [
         {"connection": "Team", "level": 70},
@@ -105,6 +116,16 @@ const players = [
         {"name": "Talking", "level":"Very Weak"}
     ],
     "emotions": 20,
+    "teamwork": [
+        {
+            'formation': '5-4-2-1',
+            'teamWork': 40
+        },
+        {
+            'formation': '2-1-4-5',
+            'teamWork': 60
+        },
+    ],
     "composure": 90,
     "relationships": [
         {"connection": "Team", "level": 70},

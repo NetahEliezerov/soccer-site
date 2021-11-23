@@ -15,19 +15,16 @@ const customStyles = {
       borderBottom: '1px solid #E9E9F3',
       color: state.isSelected ? 'white' : 'blue',
       padding: 20,
+      borderRadius: '10px',
       width: '31.4em'
     }),
     control: () => ({}),
     singleValue: (provided, state) => {
       const opacity = state.isDisabled ? 0.5 : 1;
       const transition = 'opacity 300ms';
-      return { ...provided, opacity, transition };
+      return { ...provided, opacity, transition, borderRadius: '10px' };
     },
-    menu: ({ width, ...css }) => ({ ...css }),
-    dropdownIndicator: base => ({
-        ...base,
-        color: "red" // Custom colour
-    })
+    menu: ({ width, ...css }) => ({ ...css })
 }
 
 const arraySelection = [
@@ -36,24 +33,30 @@ const arraySelection = [
 ]
 
 const FormationComponent = (props) => {
+    const [teamWorkPercents, setTeamWorkPercents] = useState(`${props.teamWork[0].teamWork}%`);
     const [selectedArray, setSelectedArray] = useState('');
 
     const handleArrayChange = (event) => {
+        const foundFormation = props.teamWork.filter((e) => e.formation == selectedArray && console.log(e)).formation;
+        // console.log(foundFormation);
         setSelectedArray(event.value);
-        console.log(event.value)
+        setTeamWorkPercents(`${foundFormation}%`);
+        // console.log(teamWorkPercents)
+        document.getElementById('progressBar').style.width = teamWorkPercents;
     }
 
+    document.documentElement.style.setProperty('--w', teamWorkPercents)
     return (
         <div className="subComponent">
                 <h4 className="titleText">Tactics familiar with</h4>
                 <div className="selectionsDiv">
                     <label for="formations">Formations</label><br />
+                    <Select onChange={handleArrayChange} options={arraySelection} styles={customStyles} className="selectionClass" components={{ DropdownIndicator:() => null, IndicatorSeparator:() => null }} />
                 </div>
-                <Select onChange={handleArrayChange} options={arraySelection} styles={customStyles} className="selectionClass" components={{ DropdownIndicator:() => null, IndicatorSeparator:() => null }} />
                 <div className="teamWork">
                     <h5 className="progressBarTitle">Teamwork</h5>
-                    <h5 className="percentsOfProgressBar">50%</h5>
-                    <div className="progressBar"><div className="subProgressBar" /></div>
+                    <h5 className="percentsOfProgressBar">{teamWorkPercents}</h5>
+                    <div className="progressBar"><div className="subProgressBar" id="progressBar" style={{width: teamWorkPercents}}/></div>
                 </div>
                 <img className="pitchImg" src="./assets/pitch.svg"/>
         </div>

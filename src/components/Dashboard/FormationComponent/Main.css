@@ -3,11 +3,11 @@
 }
 
 .subProgressBar {
-    width: 18.75em;
     height: 0.55em;
     background-color: #00F287;
     border-radius: 10px;
     animation: progressBarEnterAnimation 1000ms;
+    transition-duration: 750ms;
 }
 
 @keyframes progressBarEnterAnimation {
@@ -15,7 +15,7 @@
         width: 0;
     }
     to {
-        width: 50%;
+        width: var(--w, 100%);
     }
 }
 
@@ -50,7 +50,7 @@
 
 
 .selectionsDiv {
-    margin-left: 8%;
+    margin-left: 6%;
     margin-bottom: 3em;
 }
 
@@ -64,7 +64,6 @@
     border: 1px solid #E9E9F3;
 }
 .selectionClass {
-    margin-left: 7.5%;
     width: 31.4em;
     height: 3em;
     border: 1px solid #E9E9F3;
