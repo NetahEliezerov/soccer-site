@@ -99,7 +99,9 @@ const players = [
     ],
     "weaknesses": [
         {"name": "Heading", "level":"Weak"},
-        {"name": "Passing", "level":"Weak"},
+        {"name": "Passing", "level":"a"},
+        {"name": "Talking", "level":"Very Weak"},
+        {"name": "Talking", "level":"Very Weak"},
         {"name": "Talking", "level":"Very Weak"}
     ],
     "emotions": 20,
