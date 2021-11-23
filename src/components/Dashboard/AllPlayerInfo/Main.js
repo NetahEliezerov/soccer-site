@@ -6,6 +6,7 @@ import RadarComponent from '../RadarComponent/Main';
 import GaugeComponent from '../GaugeComponent/Main';
 import FormationComponent from '../FormationComponent/Main';
 import { Grid } from '@mui/material';
+import MainTabsComponent from '../ComparisonsComponent/Tabs/Main';
 const AllPlayerInfo = (props) => {
     return (
         <Grid container spacing={2}>
@@ -41,7 +42,12 @@ const AllPlayerInfo = (props) => {
                     <Grid item xs={12}>
                         <PieComponent info={props.player.relationships} title="Relationships" />
                     </Grid>
+                    <Grid item xs={12}>
+                    </Grid>
                 </Grid>
+            </Grid>
+            <Grid container item xs={12}>
+                <MainTabsComponent titles={['Characteristic', 'Tactics familiar', 'Strengths & Weaknesses', 'Emotions & Composure', 'Relationship']} size="large"/>
             </Grid>
         </Grid>
     )
