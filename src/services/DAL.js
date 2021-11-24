@@ -115,7 +115,7 @@ const players = [
         {"name": "Talking", "level":"Very Weak"},
         {"name": "Talking", "level":"Very Weak"}
     ],
-    "emotions": 20,
+    "emotions": 75,
     "teamwork": [
         {
             'formation': '5-4-2-1',
@@ -126,7 +126,7 @@ const players = [
             'teamWork': 60
         },
     ],
-    "composure": 90,
+    "composure": 35,
     "relationships": [
         {"connection": "Team", "level": 20},
         {"connection": "Coach", "level": 70},

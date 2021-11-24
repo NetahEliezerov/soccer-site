@@ -3,7 +3,7 @@ import { Box, createTheme, Tab, Tabs, Typography } from '@mui/material';
 import { withStyles } from '@mui/styles';
 import PropTypes from 'prop-types';
 import './Main.css';
-import PieComponent from '../../PieComponent/PieComponent';
+import MultipleGraphComponent from '../MultipleGraphComponent/MultipleGraphComponent';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -40,28 +40,24 @@ const CustomTab = withStyles({
 })(Tab);
 
 const MainTabsComponent = (props) => {
-  const [selectedTab, setSelectedTab] = React.useState('1');
+  const [selectedTab, setSelectedTab] = React.useState(0);
 
   const handleChange = (_, newValue) => {
     setSelectedTab(newValue);
   };
 
-  // const componentKeyToComponent = {'characteristics': <RadarComponent info={} />};
-  
   return (
-    <div className={`subComponent tabsComponent`}>
+    <div className="subComponent tabsComponent">
       <Box sx={{ border: '2px solid #EDECF3' }}>
         <Tabs value={selectedTab} onChange={handleChange} TabIndicatorProps={{ style: { background: '#110E43' } }} aria-label="basic tabs example">
           {props.tabs.map((tab, index) => <CustomTab style={{ color: '#110E43', fontFamily: 'Lexend' }} label={tab.title} value={index} />)}
         </Tabs>
       </Box>
-      {props.tabs.map((tab, index) => <TabPanel value={selectedTab} index={index}>
-        {
-          props.comparingPlayers && props.comparingPlayers.map(player => {
-            return (<PieComponent info={player.relationships} title={`Relationships Player: ${player.playerInfo.fullName}`} />)
-          })
-        }
-      </TabPanel>)}
+      {props.tabs.map((tab, index) => (
+        <TabPanel value={selectedTab} index={index}>
+          <MultipleGraphComponent players={props.comparingPlayers} component={tab.key} />
+        </TabPanel>)
+      )}
     </div>
   )
 }

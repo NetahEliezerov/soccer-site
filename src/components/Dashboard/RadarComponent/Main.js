@@ -2,15 +2,6 @@ import React from 'react'
 import './Main.css';
 import { Radar } from 'react-chartjs-2';
 
-const data = {
-    labels: [],
-    datasets: [{
-        data: [],
-        fill: true,
-        backgroundColor: '#4940D7',
-    }]
-};
-
 const options = {
     plugins: {
         legend: {
@@ -39,6 +30,16 @@ const options = {
 };
 
 const RadarComponent = (props) => {
+
+    const data = {
+        labels: [],
+        datasets: [{
+            data: [],
+            fill: true,
+            backgroundColor: '#4940D7',
+        }]
+    };
+
     const getData = () => {
         data.labels = Object.keys(props.info);
         data.datasets[0].data = Object.values(props.info);
@@ -46,7 +47,7 @@ const RadarComponent = (props) => {
     }
     return (
         <div className="subComponent">
-            <h3 className="header">Characteristics</h3>
+            <h3 className="header">{props.title}</h3>
             <div className="radarDiv">
                 <Radar data={getData()} width={50} height={500} redraw options={options} />
             </div>

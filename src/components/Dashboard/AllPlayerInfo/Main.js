@@ -23,15 +23,15 @@ const AllPlayerInfo = (props) => {
             {
                 props.compareMode && (
                     <Grid container item xs={12}> 
-                    {/* , 'Tactics familiar', 'Strengths & Weaknesses', 'Emotions & Composure', 'Relationship' */}
-                    <MainTabsComponent tabs={[{key: 'characteristics', title: 'Characteristics'}]} comparingPlayers={props.comparingPlayers}/>
+                    {/* , 'Tactics familiar', 'Strengths & Weaknesses', 'Emotions & Composure', 'Relationships' */}
+                    <MainTabsComponent tabs={[{key: 'characteristics', title: 'Characteristics'}, {key: 'relationships', title: 'Relationships'}, {key: 'emotionsandcomposure', title: 'Emotions & Composure'}]} comparingPlayers={props.comparingPlayers}/>
                 </Grid> 
             )}
             {
                 !props.compareMode && (
                     <Grid container item xs={12}>
                         <Grid item xs={5}>
-                            <RadarComponent info={props.player.characteristics} />
+                            <RadarComponent info={props.player.characteristics} title="Characteristics"/>
                         </Grid>
                         <Grid item xs={1} />
                         <Grid container item xs={6} rowSpacing={2}>
