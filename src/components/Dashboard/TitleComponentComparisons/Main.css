@@ -1,0 +1,19 @@
+.playerComparisonLogo {
+    -webkit-clip-path: circle();
+    clip-path: circle();
+    height: 2rem;
+    width: 3rem;
+    object-fit: contain;
+    background-color: #CBE3FF;
+}
+
+.tabTitleComparisons {
+    font-family: 'Lexend';
+}
+
+.playerInfoComparisons {
+    font-family: 'Lexend';
+    font-size: 1.1rem;
+    margin-left: 1em;
+    font-weight: normal;
+}
