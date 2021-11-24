@@ -16,10 +16,14 @@ const MainDashboardPage = () => {
         setComparingPlayers([...comparingPlayers, player]);
     }
 
+    const removePlayerFromComparison = (player) => {
+        console.log(comparingPlayers, player);
+        setComparingPlayers(comparingPlayers.filter(cp => cp !== player));
+    }
+
     const getComparingPlayers = () => [selectedPlayer, ...comparingPlayers];
 
     const setSelectedPlayer = (player) => {
-        console.log(player);
         setComparingPlayers([]);
         setSelectedPlayerPrivate(player);
     }
@@ -30,7 +34,7 @@ const MainDashboardPage = () => {
             <div class="outSideTheNavDash">
                 <SearchSectionComponent setSelectedPlayer={setSelectedPlayer} activePlayer={selectedPlayer}/>
                 <div className="playerComponents">
-                    <MainPlayerInfo player={selectedPlayer} addPlayerToComparison={addPlayerToComparison} compareMode={getComparingPlayers().length > 1} comparingPlayers={getComparingPlayers()}/>
+                    <MainPlayerInfo player={selectedPlayer} addPlayerToComparison={addPlayerToComparison} removePlayerFromComparison={removePlayerFromComparison} compareMode={getComparingPlayers().length > 1} comparingPlayers={getComparingPlayers()}/>
                 </div>
             </div>
         </div>

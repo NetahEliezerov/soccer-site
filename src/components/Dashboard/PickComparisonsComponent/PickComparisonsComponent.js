@@ -6,6 +6,15 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Button from '@mui/material/Button';
 
+
+const CompareButton = (props) => {
+    if (props.comparingPlayers.includes(props.player)) {
+        return <Button variant="contained" onClick={() => props.removePlayerFromComparison(props.player)}>Remove</Button>
+    } else {
+        return <Button variant="contained" onClick={() => props.addPlayerToComparison(props.player)}>Compare</Button>
+    }
+}
+
 const PickComparisonsComponent = (props) => {
     return (
         <div className='subComponent'>
@@ -34,7 +43,7 @@ const PickComparisonsComponent = (props) => {
                                 <TableCell>{player.strengths[0] && player.strengths[0].name}</TableCell>
                                 <TableCell>{player.playerInfo.shortenedPosition}</TableCell>
                                 <TableCell>
-                                    <Button variant="contained" onClick={() => props.addPlayerToComparison(player)}>Compare</Button>
+                                    {<CompareButton player={player} comparingPlayers={props.comparingPlayers} removePlayerFromComparison={props.removePlayerFromComparison} addPlayerToComparison={props.addPlayerToComparison}/>}
                                 </TableCell>
                             </TableRow>
                         ))}

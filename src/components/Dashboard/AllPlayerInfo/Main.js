@@ -20,7 +20,7 @@ const AllPlayerInfo = (props) => {
                 <MainPlayerInfo info={props.player} />
             </Grid>
             <Grid item xs={12}>
-                <PickComparisonsComponent playersToCompare={playersToCompare} addPlayerToComparison={props.addPlayerToComparison}/>
+                <PickComparisonsComponent playersToCompare={playersToCompare} comparingPlayers={props.comparingPlayers} addPlayerToComparison={props.addPlayerToComparison} removePlayerFromComparison={props.removePlayerFromComparison}/>
             </Grid>
             {
                 props.compareMode && (
