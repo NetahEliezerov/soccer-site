@@ -8,9 +8,21 @@ import { useState } from 'react';
 
 const MainDashboardPage = () => {
 
-    const [selectedPlayer, setSelectedPlayer] = useState(DAL.getPlayers()[0]);
+    const [selectedPlayer, setSelectedPlayerPrivate] = useState(DAL.getPlayers()[0]);
 
-    const [comparingPlayers, setComparingPlayers] = useState([DAL.getPlayers()[1],DAL.getPlayers()[2]]);
+    const [comparingPlayers, setComparingPlayers] = useState([]);
+
+    const addPlayerToComparison = (player) => {
+        setComparingPlayers([...comparingPlayers, player]);
+    }
+
+    const getComparingPlayers = () => [selectedPlayer, ...comparingPlayers];
+
+    const setSelectedPlayer = (player) => {
+        console.log(player);
+        setComparingPlayers([]);
+        setSelectedPlayerPrivate(player);
+    }
 
     return (
         <div>
@@ -18,7 +30,7 @@ const MainDashboardPage = () => {
             <div class="outSideTheNavDash">
                 <SearchSectionComponent setSelectedPlayer={setSelectedPlayer} activePlayer={selectedPlayer}/>
                 <div className="playerComponents">
-                    <MainPlayerInfo player={selectedPlayer} compareMode={true} comparingPlayers={comparingPlayers}/>
+                    <MainPlayerInfo player={selectedPlayer} addPlayerToComparison={addPlayerToComparison} compareMode={getComparingPlayers().length > 1} comparingPlayers={getComparingPlayers()}/>
                 </div>
             </div>
         </div>

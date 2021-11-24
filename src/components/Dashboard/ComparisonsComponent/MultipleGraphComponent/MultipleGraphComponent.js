@@ -4,6 +4,7 @@ import PieComponent from '../../PieComponent/PieComponent';
 import GaugeComponent from '../../GaugeComponent/Main';
 
 const MultipleGraphComponent = (props) => {
+    console.log(props.players)
 
     return (
         <Grid container spacing={2}>

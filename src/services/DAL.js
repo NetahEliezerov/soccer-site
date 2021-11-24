@@ -73,7 +73,16 @@ const players = [
         {"name": "Talking", "level":"Very Weak"}
     ],
     "emotions": 20,
-    "teamwork": 30,
+    "teamwork": [
+        {
+            'formation': '5-4-2-1',
+            'teamWork': 80
+        },
+        {
+            'formation': '2-1-4-5',
+            'teamWork': 20
+        },
+    ],
     "composure": 90,
     "relationships": [
         {"connection": "Team", "level": 70},
@@ -139,7 +148,17 @@ const players = [
         "Wide Playmaker": 87,
         "Advanced Playmaker": 86,
         "box-to-a": 70
-    }
+    },
+    "teamwork": [
+        {
+            'formation': '5-4-2-1',
+            'teamWork': 80
+        },
+        {
+            'formation': '2-1-4-5',
+            'teamWork': 20
+        },
+    ],
 }
 ]
 

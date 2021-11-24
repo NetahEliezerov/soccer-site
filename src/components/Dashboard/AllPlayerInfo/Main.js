@@ -12,26 +12,28 @@ import DAL from '../../../services/DAL';
 
 const AllPlayerInfo = (props) => {
 
+    const playersToCompare = [DAL.getPlayers()[1], DAL.getPlayers()[2]];
+
     return (
         <Grid container spacing={3}>
             <Grid item xs={12}>
                 <MainPlayerInfo info={props.player} />
             </Grid>
             <Grid item xs={12}>
-                <PickComparisonsComponent comparingPlayers={props.comparingPlayers} />
+                <PickComparisonsComponent playersToCompare={playersToCompare} addPlayerToComparison={props.addPlayerToComparison}/>
             </Grid>
             {
                 props.compareMode && (
-                    <Grid container item xs={12}> 
-                    {/* , 'Tactics familiar', 'Strengths & Weaknesses', 'Emotions & Composure', 'Relationships' */}
-                    <MainTabsComponent tabs={[{key: 'characteristics', title: 'Characteristics'}, {key: 'relationships', title: 'Relationships'}, {key: 'emotionsandcomposure', title: 'Emotions & Composure'}]} comparingPlayers={props.comparingPlayers}/>
-                </Grid> 
-            )}
+                    <Grid container item xs={12}>
+                        {/* , 'Tactics familiar', 'Strengths & Weaknesses', 'Emotions & Composure', 'Relationships' */}
+                        <MainTabsComponent tabs={[{ key: 'characteristics', title: 'Characteristics' }, { key: 'relationships', title: 'Relationships' }, { key: 'emotionsandcomposure', title: 'Emotions & Composure' }]} comparingPlayers={props.comparingPlayers} />
+                    </Grid>
+                )}
             {
                 !props.compareMode && (
                     <Grid container item xs={12}>
                         <Grid item xs={5}>
-                            <RadarComponent info={props.player.characteristics} title="Characteristics"/>
+                            <RadarComponent info={props.player.characteristics} title="Characteristics" />
                         </Grid>
                         <Grid item xs={1} />
                         <Grid container item xs={6} rowSpacing={2}>

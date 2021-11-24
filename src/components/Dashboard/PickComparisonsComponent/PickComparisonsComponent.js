@@ -22,7 +22,7 @@ const PickComparisonsComponent = (props) => {
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {props.comparingPlayers && props.comparingPlayers.map((player) => (
+                        {props.playersToCompare && props.playersToCompare.map((player) => (
                             <TableRow
                                 key={player.playerName}
                                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }} // remove bottom border for last row
@@ -34,7 +34,7 @@ const PickComparisonsComponent = (props) => {
                                 <TableCell>{player.strengths[0] && player.strengths[0].name}</TableCell>
                                 <TableCell>{player.playerInfo.shortenedPosition}</TableCell>
                                 <TableCell>
-                                    <Button variant="contained">Compare</Button>
+                                    <Button variant="contained" onClick={() => props.addPlayerToComparison(player)}>Compare</Button>
                                 </TableCell>
                             </TableRow>
                         ))}
