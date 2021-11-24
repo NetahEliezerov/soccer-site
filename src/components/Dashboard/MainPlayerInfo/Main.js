@@ -16,9 +16,9 @@ const MainPlayerInfo = (props) => {
                         <span class="dividerPlayerInfo"></span>
                         <span>{props.info.playerInfo.dateOfBirth}</span>
                     </p>
-                    <p class="dividedPlayerInfo2">
+                    <p class="dividedPlayerInfo">
                         <span>Preferred Foot</span>
-                        <span class="dividerPlayerInfo2"></span>
+                        <span class="dividerPlayerInfo"></span>
                         <span>{props.info.playerInfo.preferredFoot}</span>
                     </p>
                     <p class="dividedPlayerInfo">
@@ -26,9 +26,9 @@ const MainPlayerInfo = (props) => {
                         <span class="dividerPlayerInfo"></span>
                         <span>{props.info.playerInfo.placeOfBirth}</span>
                     </p>
-                    <p class="dividedPlayerInfo2">
+                    <p class="dividedPlayerInfo">
                         <span>Height</span>
-                        <span class="dividerPlayerInfo2"></span>
+                        <span class="dividerPlayerInfo"></span>
                         <span>{props.info.playerInfo.height}</span>
                     </p>
                     <p class="dividedPlayerInfo">

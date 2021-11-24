@@ -87,22 +87,9 @@
   
 .dividerPlayerInfo {
     flex-grow: 1;
-    border-bottom: 1px dotted #E9E9F3;
+    border-bottom: 3px dotted #E9E9F3;
 }
 
-.dividedPlayerInfo2 {
-    display: inline-flex;
-    margin-right: 5%;
-    width: 40%;
-    font-size: 1.2rem;
-    margin-left: 2rem;
-    margin-top: 1rem;
-}
-  
-.dividerPlayerInfo2 {
-    flex-grow: 1;
-    border-bottom: 1px dotted #E9E9F3;
-}
 
 .secondLine {
     overflow: hidden;
