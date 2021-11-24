@@ -81,12 +81,12 @@ const players = [
         {"connection": "Management", "level": 10}
     ],
     "characteristics": {
-        "Pressing Forward": 95,
-        "Shadow Striker": 90,
-        "Inside Forward": 96,
-        "Wide Playmaker": 87,
-        "Advanced Playmaker": 86,
-        "box-to-a": 70
+        "Pressing Forward": 90,
+        "Shadow Striker": 96,
+        "Inside Forward": 90,
+        "Wide Playmaker": 50,
+        "Advanced Playmaker": 95,
+        "box-to-a": 87
     }
 },
 {
@@ -128,8 +128,8 @@ const players = [
     ],
     "composure": 90,
     "relationships": [
-        {"connection": "Team", "level": 70},
-        {"connection": "Coach", "level": 20},
+        {"connection": "Team", "level": 20},
+        {"connection": "Coach", "level": 70},
         {"connection": "Management", "level": 10}
     ],
     "characteristics": {

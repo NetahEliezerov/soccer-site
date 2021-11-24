@@ -3,17 +3,7 @@ import { Box, createTheme, Tab, Tabs, Typography } from '@mui/material';
 import { withStyles } from '@mui/styles';
 import PropTypes from 'prop-types';
 import './Main.css';
-
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#0052cc',
-    },
-    secondary: {
-      main: '#edf2ff',
-    },
-  },
-});
+import PieComponent from '../../PieComponent/PieComponent';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -34,11 +24,7 @@ function TabPanel(props) {
     </div>
   );
 }
-const styles = theme => ({
-  indicator: {
-    backgroundColor: 'white',
-  },
-})
+
 TabPanel.propTypes = {
   children: PropTypes.node,
   index: PropTypes.number.isRequired,
@@ -60,6 +46,8 @@ const MainTabsComponent = (props) => {
     setSelectedTab(newValue);
   };
 
+  // const componentKeyToComponent = {'characteristics': <RadarComponent info={} />};
+  
   return (
     <div className={`subComponent tabsComponent`}>
       <Box sx={{ border: '2px solid #EDECF3' }}>
@@ -68,7 +56,11 @@ const MainTabsComponent = (props) => {
         </Tabs>
       </Box>
       {props.tabs.map((tab, index) => <TabPanel value={selectedTab} index={index}>
-        The title is: {tab.title}
+        {
+          props.comparingPlayers && props.comparingPlayers.map(player => {
+            return (<PieComponent info={player.relationships} title={`Relationships Player: ${player.playerInfo.fullName}`} />)
+          })
+        }
       </TabPanel>)}
     </div>
   )

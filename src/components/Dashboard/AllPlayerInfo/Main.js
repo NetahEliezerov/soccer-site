@@ -18,13 +18,13 @@ const AllPlayerInfo = (props) => {
                 <MainPlayerInfo info={props.player} />
             </Grid>
             <Grid item xs={12}>
-                <PickComparisonsComponent comparingPlayers={DAL.getPlayers()} />
+                <PickComparisonsComponent comparingPlayers={props.comparingPlayers} />
             </Grid>
             {
                 props.compareMode && (
                     <Grid container item xs={12}> 
                     {/* , 'Tactics familiar', 'Strengths & Weaknesses', 'Emotions & Composure', 'Relationship' */}
-                    <MainTabsComponent tabs={[{key: 'characteristics', title: 'Characteristics'}]} />
+                    <MainTabsComponent tabs={[{key: 'characteristics', title: 'Characteristics'}]} comparingPlayers={props.comparingPlayers}/>
                 </Grid> 
             )}
             {
