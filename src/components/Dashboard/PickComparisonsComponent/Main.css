@@ -5,3 +5,21 @@
 .cancelButton {
     color: #FF4C41;
 }
+
+.tableTitles {
+    font-family: 'Lexend';
+    font-weight: bold;
+}
+
+.tableValues {
+    font-family: 'Lexend';
+}
+
+.countryComparisonLogo {
+    -webkit-clip-path: circle();
+    clip-path: circle();
+    height: 1.5rem;
+    margin-right: 0.5em;
+    object-fit: contain;
+    background-color: #CBE3FF;
+}

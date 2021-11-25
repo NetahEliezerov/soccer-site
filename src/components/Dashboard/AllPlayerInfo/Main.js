@@ -11,8 +11,8 @@ import { PickComparisonsComponent } from '../PickComparisonsComponent/PickCompar
 import DAL from '../../../services/DAL';
 
 const AllPlayerInfo = (props) => {
-
-    const playersToCompare = [DAL.getPlayers()[1], DAL.getPlayers()[2]];
+    const playersToCompare = DAL.getPlayers().filter((player) => player != props.player);
+    // const playersToCompare = [DAL.getPlayers()[1], DAL.getPlayers()[2]];
 
     return (
         <Grid container spacing={3}>
