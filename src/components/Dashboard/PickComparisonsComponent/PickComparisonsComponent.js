@@ -4,15 +4,17 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
-import Button from '@mui/material/Button';
 import './Main.css';
 
 
 const CompareButton = (props) => {
+    const compareBtn = process.env.PUBLIC_URL + '/assets/compare.svg';
+    console.log(compareBtn);
+    document.documentElement.style.setProperty('--compareBtn', compareBtn);
     if (props.comparingPlayers.includes(props.player)) {
-        return <Button className="cancelButton" variant="contained" startIcon={<img src={process.env.PUBLIC_URL + '/assets/compare.svg'}/>} onClick={() => props.removePlayerFromComparison(props.player)}>Cancel</Button>
+        return <button className="cancelButton" variant="contained" startIcon={<img src={process.env.PUBLIC_URL + '/assets/compare.svg'}/>} onClick={() => props.removePlayerFromComparison(props.player)}>Cancel</button>
     } else {
-        return <Button className="compareButton" variant="contained" startIcon={<img src={process.env.PUBLIC_URL + '/assets/compare.svg'}/>} onClick={() => props.addPlayerToComparison(props.player)}>Compare</Button>
+        return <button className="compareButton" variant="contained" onClick={() => props.addPlayerToComparison(props.player)}>Compare</button>
     }
 }
 

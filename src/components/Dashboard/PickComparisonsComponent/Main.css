@@ -1,9 +1,47 @@
 .compareButton {
+    background-image: url('http://localhost:3000/soccer-site/assets/compare.svg');
+    background-size: 1.45rem;
+    background-position: left;
+    background-repeat: no-repeat;
     color: #00F287;
+    background-color: transparent;
+    width: 7rem;
+    height: 3rem;
+    text-align: center;
+    padding-left: 1rem;
+    border: none;
+    font-family: 'Lexend';
+    border-radius: 10px;
+    transition-duration: 200ms;
+}
+
+.compareButton:hover {
+    background: #00F287;
+    color: white;
+    cursor: pointer;
 }
 
 .cancelButton {
+    background-image: url('http://localhost:3000/soccer-site/assets/cancel.svg');
+    background-size: 1.45rem;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    width: 7rem;
+    height: 3rem;
+    text-align: center;
+    padding-left: 0.1rem;
+    border: none;
+    font-family: 'Lexend';
+    border-radius: 10px;
+    transition-duration: 200ms;
     color: #FF4C41;
+}
+
+.cancelButton:hover {
+    background: #FF4C41;
+    color: white;
+    cursor: pointer;
 }
 
 .tableTitles {
