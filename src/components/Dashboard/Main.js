@@ -17,7 +17,6 @@ const MainDashboardPage = () => {
     }
 
     const removePlayerFromComparison = (player) => {
-        console.log(comparingPlayers, player);
         setComparingPlayers(comparingPlayers.filter(cp => cp !== player));
     }
 

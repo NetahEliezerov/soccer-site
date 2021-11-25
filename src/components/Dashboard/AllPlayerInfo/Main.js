@@ -12,7 +12,6 @@ import DAL from '../../../services/DAL';
 
 const AllPlayerInfo = (props) => {
     const playersToCompare = DAL.getPlayers().filter((player) => player != props.player);
-    // const playersToCompare = [DAL.getPlayers()[1], DAL.getPlayers()[2]];
 
     return (
         <Grid container spacing={3}>
@@ -25,7 +24,6 @@ const AllPlayerInfo = (props) => {
             {
                 props.compareMode && (
                     <Grid container item xs={12}>
-                        {/* , 'Tactics familiar', 'Strengths & Weaknesses', 'Emotions & Composure', 'Relationships' */}
                         <MainTabsComponent tabs={[{ key: 'characteristics', title: 'Characteristics' }, { key: 'relationships', title: 'Relationships' }, { key: 'emotionsandcomposure', title: 'Emotions & Composure' }]} comparingPlayers={props.comparingPlayers} />
                     </Grid>
                 )}
