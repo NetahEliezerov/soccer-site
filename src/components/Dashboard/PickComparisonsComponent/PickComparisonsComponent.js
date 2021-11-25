@@ -9,9 +9,9 @@ import Button from '@mui/material/Button';
 
 const CompareButton = (props) => {
     if (props.comparingPlayers.includes(props.player)) {
-        return <Button variant="contained" onClick={() => props.removePlayerFromComparison(props.player)}>Remove</Button>
+        return <Button className="cancelButton" variant="contained" startIcon={<img src={process.env.PUBLIC_URL + '/assets/compare.svg'}/>}} onClick={() => props.removePlayerFromComparison(props.player)}>Cancel</Button>
     } else {
-        return <Button variant="contained" onClick={() => props.addPlayerToComparison(props.player)}>Compare</Button>
+        return <Button className="compareButton" variant="contained" startIcon={<img src={process.env.PUBLIC_URL + '/assets/compare.svg'}/>} onClick={() => props.addPlayerToComparison(props.player)}>Compare</Button>
     }
 }
 
