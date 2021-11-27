@@ -50,8 +50,9 @@
 
 
 .selectionsDiv {
-    margin-left: 6%;
+    margin: 0 auto;
     margin-bottom: 3em;
+    width: fit-content;
 }
 
 .optionClass {

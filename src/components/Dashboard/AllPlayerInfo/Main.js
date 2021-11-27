@@ -24,7 +24,7 @@ const AllPlayerInfo = (props) => {
             {
                 props.compareMode && (
                     <Grid container item xs={12}>
-                        <MainTabsComponent tabs={[{ key: 'characteristics', title: 'Characteristics' }, { key: 'relationships', title: 'Relationships' }, { key: 'emotionsandcomposure', title: 'Emotions & Composure' }]} comparingPlayers={props.comparingPlayers} />
+                        <MainTabsComponent tabs={[{ key: 'characteristics', title: 'Characteristics' }, { key: 'tacticsfamiliar', title: 'Tactics familiar' }, { key: 'relationships', title: 'Relationships' }, { key: 'emotionsandcomposure', title: 'Emotions & Composure' }]} comparingPlayers={props.comparingPlayers} />
                     </Grid>
                 )}
             {

@@ -76,11 +76,11 @@ const players = [
     "teamwork": [
         {
             'formation': '5-4-2-1',
-            'teamWork': 80
+            'teamWork': 50
         },
         {
             'formation': '2-1-4-5',
-            'teamWork': 20
+            'teamWork': 90
         },
     ],
     "composure": 90,
@@ -128,11 +128,11 @@ const players = [
     "teamwork": [
         {
             'formation': '5-4-2-1',
-            'teamWork': 40
+            'teamWork': 30
         },
         {
             'formation': '2-1-4-5',
-            'teamWork': 60
+            'teamWork': 10
         },
     ],
     "composure": 35,
@@ -148,17 +148,7 @@ const players = [
         "Wide Playmaker": 87,
         "Advanced Playmaker": 86,
         "box-to-a": 70
-    },
-    "teamwork": [
-        {
-            'formation': '5-4-2-1',
-            'teamWork': 80
-        },
-        {
-            'formation': '2-1-4-5',
-            'teamWork': 20
-        },
-    ],
+    }
 }
 ]
 

@@ -30,17 +30,19 @@ const FormationComponent = (props) => {
     const [teamWorkPercents, setTeamWorkPercents] = useState(`${props.teamWork[0].teamWork}%`);
     const [selectedArray, setSelectedArray] = useState('');
 
-    const handleArrayChange = (event) => {
-        const foundFormation = props.teamWork.filter((e) => e.formation == selectedArray && console.log(e)).formation;
-        setSelectedArray(event.value);
-        setTeamWorkPercents(`${foundFormation}%`);
+    const handleArrayChange = (value) => {
+        setSelectedArray(value.value);
+        const foundFormation = props.teamWork.filter((e) => e.formation === value.value)[0];
+        setTeamWorkPercents(`${foundFormation.teamWork}%`);
+        console.log(foundFormation)
         document.getElementById('progressBar').style.width = teamWorkPercents;
     }
 
     document.documentElement.style.setProperty('--w', teamWorkPercents)
     return (
-        <div className="subComponent">
-                <h4 className="titleText">Tactics familiar with</h4>
+        <div className={`subComponent ${props.size}`}>
+                { !props.title && <h4 className="titleText">Tactics familiar with</h4> }
+                { props.title && <h4 className="titleText">{props.title}</h4> }
                 <div className="selectionsDiv">
                     <label for="formations">Formations</label><br />
                     <Select onChange={handleArrayChange} options={arraySelection} styles={customStyles} className="selectionClass" components={{ DropdownIndicator:() => null, IndicatorSeparator:() => null }} />
