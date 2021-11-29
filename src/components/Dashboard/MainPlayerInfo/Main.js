@@ -2,6 +2,13 @@ import React from 'react';
 import './Main.css';
 
 const MainPlayerInfo = (props) => {
+    const playerDateSplited = String(props.info.playerInfo.dateOfBirth).split('/');
+    const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+    ];
+    console.log(playerDateSplited)
+    const trueDateOfBirth = `${playerDateSplited[0]} ${monthNames[playerDateSplited[1] - 1]}. ${playerDateSplited[2]}`;
+    
     return (
         <div className="subComponent mainPlayerInfoDiv">
             <div className="playerTitle">
@@ -14,7 +21,7 @@ const MainPlayerInfo = (props) => {
                     <p class="dividedPlayerInfo">
                         <span>Date of birth</span>
                         <span class="dividerPlayerInfo"></span>
-                        <span>{props.info.playerInfo.dateOfBirth}</span>
+                        <span>{trueDateOfBirth}</span>
                     </p>
                     <p class="dividedPlayerInfo">
                         <span>Preferred Foot</span>

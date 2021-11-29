@@ -27,6 +27,7 @@
 }
 
 .progressBarTitle {
+    font-family: 'Lexend';
     display: inline;
     font-weight: 400;
 }
@@ -50,12 +51,14 @@
 
 
 .selectionsDiv {
+    font-family: 'Lexend';
     margin: 0 auto;
     margin-bottom: 3em;
     width: fit-content;
 }
 
 .optionClass {
+    font-family: 'Lexend';
     background-color: white;
     width: 37.5em;
     height: 3.4em;
@@ -65,6 +68,7 @@
     border: 1px solid #E9E9F3;
 }
 .selectionClass {
+    font-family: 'Lexend';
     width: 31.4em;
     height: 3em;
     border: 1px solid #E9E9F3;

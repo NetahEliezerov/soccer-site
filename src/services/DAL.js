@@ -149,6 +149,58 @@ const players = [
         "Advanced Playmaker": 86,
         "box-to-a": 70
     }
+},
+{
+    "playerInfo": {
+        "imageSrc":"https://i.ibb.co/9Z6TZGw/Ellipse-1.png",
+        "dateOfBirth": "14/7/1995",
+        "country": "Germany",
+        "city": "Stuttgart",
+        "placeOfBirth": "Stuttgart, Germany",
+        "mainland": "eu",
+        "positions": "Right wingH",
+        "height":"174",
+        "preferredFoot":"Right",
+        "fullName": "Timo Werner",
+        "shortenedPosition":"RW"
+    },
+    "strengths": [
+        {"name": "Key passes", "level":"Very strong"},
+        {"name": "Finishing", "level":"Strong"},
+        {"name": "Dribbling", "level":"Strong"},
+        {"name": "Holding on to the ball", "level":"Strong"},
+        {"name": "Passing", "level":"Strong"},
+        {"name": "Long shots", "level":"Strong"},
+    ],
+    "weaknesses": [
+        {"name": "Aerial duels", "level":"Weak"},
+        {"name": "Crossing", "level":"Weak"}
+    ],
+    "emotions": 80,
+    "teamwork": [
+        {
+            'formation': '5-4-2-1',
+            'teamWork': 50
+        },
+        {
+            'formation': '2-1-4-5',
+            'teamWork': 70
+        },
+    ],
+    "composure": 23,
+    "relationships": [
+        {"connection": "Team", "level": 65},
+        {"connection": "Coach", "level": 25},
+        {"connection": "Management", "level": 10}
+    ],
+    "characteristics": {
+        "Pressing Forward": 95,
+        "Shadow Striker": 90,
+        "Inside Forward": 96,
+        "Wide Playmaker": 87,
+        "Advanced Playmaker": 86,
+        "box-to-a": 70
+    }
 }
 ]
 

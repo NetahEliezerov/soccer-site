@@ -35,10 +35,10 @@ const FormationComponent = (props) => {
         const foundFormation = props.teamWork.filter((e) => e.formation === value.value)[0];
         setTeamWorkPercents(`${foundFormation.teamWork}%`);
         console.log(foundFormation)
-        document.getElementById('progressBar').style.width = teamWorkPercents;
+        document.getElementById(`progressBar${props.playerName}`).style.width = teamWorkPercents;
     }
 
-    document.documentElement.style.setProperty('--w', teamWorkPercents)
+    document.documentElement.style.setProperty('--w', `${props.teamWork[0].teamWork}%`)
     return (
         <div className={`subComponent ${props.size}`}>
                 { !props.title && <h4 className="titleText">Tactics familiar with</h4> }
@@ -50,7 +50,7 @@ const FormationComponent = (props) => {
                 <div className="teamWork">
                     <h5 className="progressBarTitle">Teamwork</h5>
                     <h5 className="percentsOfProgressBar">{teamWorkPercents}</h5>
-                    <div className="progressBar"><div className="subProgressBar" id="progressBar" style={{width: teamWorkPercents}}/></div>
+                    <div className="progressBar"><div className="subProgressBar" id={`progressBar${props.playerName}`} style={{width: teamWorkPercents}}/></div>
                 </div>
                 <img className="pitchImg" src={process.env.PUBLIC_URL + '/assets/pitch.svg'} />
         </div>
