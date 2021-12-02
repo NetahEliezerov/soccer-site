@@ -20,7 +20,7 @@
 }
 
 .progressBar {
-    width: 37.5em;
+    width: 20.5vw;
     height: 0.55em;
     background-color: #F7F7F8;
     border-radius: 10px;
@@ -45,7 +45,6 @@
 }
 
 .pitchImg {
-    margin-left: 25%;
     margin-bottom: 1em;
 }
 
@@ -69,7 +68,7 @@
 }
 .selectionClass {
     font-family: 'Lexend';
-    width: 31.4em;
+    width: 20.5vw;
     height: 3em;
     border: 1px solid #E9E9F3;
     border-radius: 10px;

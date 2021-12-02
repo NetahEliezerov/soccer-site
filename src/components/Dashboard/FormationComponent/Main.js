@@ -52,7 +52,9 @@ const FormationComponent = (props) => {
                     <h5 className="percentsOfProgressBar">{teamWorkPercents}</h5>
                     <div className="progressBar"><div className="subProgressBar" id={`progressBar${props.playerName}`} style={{width: teamWorkPercents}}/></div>
                 </div>
+                <center>
                 <img className="pitchImg" src={process.env.PUBLIC_URL + '/assets/pitch.svg'} />
+                </center>
         </div>
     )
 }

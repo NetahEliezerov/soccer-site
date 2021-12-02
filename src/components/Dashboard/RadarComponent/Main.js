@@ -45,11 +45,16 @@ const RadarComponent = (props) => {
         data.datasets[0].data = Object.values(props.info);
         return data;
     }
+
+    const radarStyle = {
+        
+    }
+
     return (
         <div className="subComponent">
             <h3 className="header">{props.title}</h3>
             <div className="radarDiv">
-                <Radar data={getData()} width={50} height={500} redraw options={options} />
+                <Radar data={getData()} width={50} style={{ height: '31vh' }} redraw options={options} />
             </div>
         </div>
     )
