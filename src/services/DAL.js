@@ -4,6 +4,7 @@ const players = [
         "imageSrc":"https://futhead.cursecdn.com/static/img/19/players/204399.png",
         "dateOfBirth": "09/12/1988",
         "country": "Germany",
+        "countryCode":"il",
         "city": "Stuttgard",
         "placeOfBirth": "Stuttgard, Germany",
         "mainland": "eu",

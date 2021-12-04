@@ -1,9 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-.mainPlayerInfoDiv {
-    margin-top: 3em;
-}
-
 .playerTitle {
     display: inline-flex;
     align-items: center;
@@ -27,21 +22,9 @@
 }
 
 .countryIcon {
-    height: 2rem;
-    width: 2rem;
+    height: 2.5rem;
+    width: 2.5rem;
     margin-left: 2.5%;
-}
-
-.countryIconGerman {
-    height: 2rem;
-    width: 2rem;
-    margin-left: 2.5rem;
-}
-
-.countryIconEurope {
-    height: 2rem;
-    width: 2rem;
-    margin-left: 1rem;
 }
 
 .boxOfSomethingIdk {

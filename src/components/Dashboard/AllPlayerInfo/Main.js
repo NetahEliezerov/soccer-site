@@ -14,7 +14,7 @@ const AllPlayerInfo = (props) => {
     const playersToCompare = DAL.getPlayers().filter((player) => player != props.player);
 
     return (
-        <Grid container spacing={3}>
+        <Grid container>
             <Grid item xs={12}>
                 <MainPlayerInfo info={props.player} />
             </Grid>
