@@ -17,6 +17,12 @@
     padding-bottom: 1rem;
 }
 
+@media only screen and (min-height: 1600px) {
+    .subComponent {
+        height: 25vh !important;
+    }
+}
+
 .titleText {
     margin: 1.5em;
     font-size: 1.8rem;

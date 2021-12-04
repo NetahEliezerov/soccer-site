@@ -23,13 +23,13 @@ const PickComparisonsComponent = (props) => {
         <div className='subComponent'>
             <h1 className="titleText">Compare to current squad</h1>
             <TableContainer >
-                <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                <Table sx={{ width: '120%' }} aria-label="simple table">
                     <TableHead>
                         <TableRow className="tableTitles">
                             <TableCell><span className="tableTitles">Name</span></TableCell>
                             <TableCell><span className="tableTitles">Nationality</span></TableCell>
-                            <TableCell><span className="tableTitles">Strengths</span></TableCell>
-                            <TableCell><span className="tableTitles">Quality</span></TableCell>
+                            <TableCell></TableCell>
+                            <TableCell></TableCell>
                             <TableCell></TableCell>
                         </TableRow>
                     </TableHead>
@@ -44,8 +44,6 @@ const PickComparisonsComponent = (props) => {
                                     <span className="tableValues">{player.playerInfo.fullName}</span>
                                 </TableCell>
                                 <TableCell><span className="tableValues"><img className="countryComparisonLogo" src={process.env.PUBLIC_URL + '/assets/german.png'} />{player.playerInfo.country}</span></TableCell>
-                                <TableCell><span className="tableValues">{player.strengths[0] && player.strengths[0].name}</span></TableCell>
-                                <TableCell><span className="tableValues">{player.playerInfo.shortenedPosition}</span></TableCell>
                                 <TableCell>
                                     {<CompareButton player={player} comparingPlayers={props.comparingPlayers} removePlayerFromComparison={props.removePlayerFromComparison} addPlayerToComparison={props.addPlayerToComparison}/>}
                                 </TableCell>
