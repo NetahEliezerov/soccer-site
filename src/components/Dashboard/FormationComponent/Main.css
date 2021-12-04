@@ -24,7 +24,6 @@
 }
 
 .progressBar {
-    width: 20.5vw;
     height: 0.55em;
     background-color: #F7F7F8;
     border-radius: 10px;
@@ -37,9 +36,8 @@
 }
 
 .teamWork {
-    width: fit-content;
-    margin: 0 auto;
-    margin-bottom: 4em;
+    width: 100%;
+    padding: 1em;
 }
 
 .percentsOfProgressBar {
@@ -49,7 +47,8 @@
 }
 
 .pitchImg {
-    margin-bottom: 1em;
+    margin: 0 auto;
+    height: 10em;
 }
 
 
@@ -72,11 +71,20 @@
 }
 .selectionClass {
     font-family: 'Lexend';
-    width: 20.5vw;
+    width: 100%;
     height: 3em;
     border: 1px solid #E9E9F3;
     border-radius: 10px;
     padding-top: 0.5rem;
     margin-bottom: 2em;
     font-size: 1.2rem;
+}
+
+.titletext {
+    margin-top: 0.8em;
+    margin-left: 0.8em;
+}
+
+.formationDiv {
+    padding: 1em;
 }

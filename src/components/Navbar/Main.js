@@ -17,20 +17,17 @@ const pages = [
 
 function MainNavbarComponent() {
     return (
-        <div>
-            <ul className="Nav">
-                <li>
-                    <div className="userIcon">F</div>
-                </li>
-                {pages.map((page) => <li>
-                    <button onClick={() => window.location.href = page.url} className={`navbarButton ${page.isSelected ? "activeNavbarBtn" : ""}`}>
-                        <img src={page.icon} /><br />
-                        <span className="navbarItemTxt">{page.nameOfPage}</span>
-                    </button>
-                </li>)}
-            </ul>
-
-        </div>
+        <ul className="Nav">
+            <li>
+                <div className="userIcon">F</div>
+            </li>
+            {pages.map((page) => <li>
+                <button onClick={() => window.location.href = page.url} className={`navbarButton ${page.isSelected ? "activeNavbarBtn" : ""}`}>
+                    <img src={page.icon} /><br />
+                    <span className="navbarItemTxt">{page.nameOfPage}</span>
+                </button>
+            </li>)}
+        </ul>
     )
 }
 

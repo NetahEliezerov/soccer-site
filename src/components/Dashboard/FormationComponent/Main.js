@@ -10,7 +10,7 @@ const customStyles = {
       color: state.isSelected ? 'white' : 'blue',
       padding: 20,
       borderRadius: '10px',
-      width: '31.4em'
+      width: '100%'
     }),
     control: () => ({}),
     singleValue: (provided, state) => {
@@ -34,17 +34,18 @@ const FormationComponent = (props) => {
         setSelectedArray(value.value);
         const foundFormation = props.teamWork.filter((e) => e.formation === value.value)[0];
         setTeamWorkPercents(`${foundFormation.teamWork}%`);
-        console.log(foundFormation)
         document.getElementById(`progressBar${props.playerName}`).style.width = teamWorkPercents;
     }
 
     document.documentElement.style.setProperty('--w', `${props.teamWork[0].teamWork}%`)
     return (
         <div className={`subComponent formation-comp`}>
-                { !props.title && <h4 className="titleText">Tactics familiar with</h4> }
-                { props.title && <h4 className="titleText">{props.title}</h4> }
-                <div className="selectionsDiv">
-                    <label for="formations">Formations</label><br />
+                { !props.title && <h4 className="titletext">Tactics familiar with</h4> }
+                <center>
+                    <img className="pitchImg" src={process.env.PUBLIC_URL + '/assets/pitch.svg'} />
+                </center>
+                <div className="formationDiv">
+                    <label for="formations">Formations</label>
                     <Select onChange={handleArrayChange} options={arraySelection} styles={customStyles} className="selectionClass" components={{ DropdownIndicator:() => null, IndicatorSeparator:() => null }} />
                 </div>
                 <div className="teamWork">
@@ -52,9 +53,7 @@ const FormationComponent = (props) => {
                     <h5 className="percentsOfProgressBar">{teamWorkPercents}</h5>
                     <div className="progressBar"><div className="subProgressBar" id={`progressBar${props.playerName}`} style={{width: teamWorkPercents}}/></div>
                 </div>
-                <center>
-                <img className="pitchImg" src={process.env.PUBLIC_URL + '/assets/pitch.svg'} />
-                </center>
+                
         </div>
     )
 }

@@ -5,6 +5,7 @@ import SearchSectionComponent from './SearchSectionComponent/SearchSectionCompon
 import MainPlayerInfo from './AllPlayerInfo/Main';
 import DAL from '../../services/DAL';
 import { useState } from 'react';
+import { Grid } from '@mui/material';
 
 const MainDashboardPage = () => {
 
@@ -28,15 +29,20 @@ const MainDashboardPage = () => {
     }
 
     return (
-        <div>
-            <MainNavbarComponent />
-            <div class="outSideTheNavDash">
+        <Grid container spacing={0} className="full-height">
+            <Grid item xs={0.7}>
+                <MainNavbarComponent />
+            </Grid>
+            <Grid item xs={1.8}>
                 <SearchSectionComponent setSelectedPlayer={setSelectedPlayer} activePlayer={selectedPlayer}/>
-                <div className="playerComponents">
+            </Grid>
+            <Grid item xs={0.2}>
+            </Grid>
+            <Grid item xs={9.1}>
                     <MainPlayerInfo player={selectedPlayer} addPlayerToComparison={addPlayerToComparison} removePlayerFromComparison={removePlayerFromComparison} compareMode={getComparingPlayers().length > 1} comparingPlayers={getComparingPlayers()}/>
-                </div>
-            </div>
-        </div>
+            </Grid>
+            <Grid item xs={0.2}></Grid>
+        </Grid>
     )
 }
 

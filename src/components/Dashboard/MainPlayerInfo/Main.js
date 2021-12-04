@@ -10,8 +10,8 @@ const MainPlayerInfo = (props) => {
             <div className="playerTitle">
                 <img src={props.info.playerInfo.imageSrc} className="playerLogo" />
                 <h1 className="playerName">{props.info.playerInfo.fullName}</h1>
-                <img src={`https://flagcdn.com/${props.info.playerInfo.countryCode}.svg`} className="countryIcon" />
-                <img src="https://icons.iconarchive.com/icons/wikipedia/flags/512/EU-European-Union-Flag-icon.png" className="countryIcon" />
+                <img src={`https://flagcdn.com/80x60/${props.info.playerInfo.countryCode}.png`} className="countryIcon" />
+                <img src="https://flagcdn.com/80x60/eu.png" className="countryIcon" />
                 <div className="boxOfSomethingIdk"><span className="textOfSomethingIdk">{props.info.playerInfo.shortenedPosition}</span></div>
             </div><br />
             {

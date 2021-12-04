@@ -22,14 +22,12 @@ const PickComparisonsComponent = (props) => {
     return (
         <div className='subComponent'>
             <h1 className="titleText">Compare to current squad</h1>
-            <TableContainer >
-                <Table sx={{ width: '120%' }} aria-label="simple table">
+            <TableContainer>
+                <Table sx={{ width: '100%' }} aria-label="simple table">
                     <TableHead>
                         <TableRow className="tableTitles">
                             <TableCell><span className="tableTitles">Name</span></TableCell>
                             <TableCell><span className="tableTitles">Nationality</span></TableCell>
-                            <TableCell></TableCell>
-                            <TableCell></TableCell>
                             <TableCell></TableCell>
                         </TableRow>
                     </TableHead>

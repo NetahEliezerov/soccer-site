@@ -4,7 +4,7 @@ import './Main.css';
 
 const GaugeComponent = (props) => {
     return (
-        <div className={`subComponent ${props.size}`}>
+        <div className='subComponent guageHeight'>
             <h1 className="titleText">{props.title}</h1>
             <GaugeChart
             percent={props.percent/100}

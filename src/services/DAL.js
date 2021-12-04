@@ -55,6 +55,7 @@ const players = [
         "dateOfBirth": "09/12/1999",
         "country": "Portugal",
         "city": "Lisbon",
+        "countryCode":"pt",
         "placeOfBirth": "Lisbon, Portugal",
         "mainland": "eu",
         "positions": "Right Wing",
@@ -108,6 +109,7 @@ const players = [
         "placeOfBirth": "Lisbon, Portugal",
         "mainland": "eu",
         "positions": "Right Wing",
+        "countryCode":"ar",
         "height":"187",
         "preferredFoot":"Right",
         "fullName": "Lionel Messi",
@@ -153,7 +155,7 @@ const players = [
 },
 {
     "playerInfo": {
-        "imageSrc":"https://i.ibb.co/9Z6TZGw/Ellipse-1.png",
+        "imageSrc":"https://as01.epimg.net/img/comunes/fotos/fichas/deportistas/t/tim/large/22911.png",
         "dateOfBirth": "14/7/1995",
         "country": "Germany",
         "city": "Stuttgart",
@@ -161,6 +163,7 @@ const players = [
         "mainland": "eu",
         "positions": "Right wingH",
         "height":"174",
+        "countryCode":"de",
         "preferredFoot":"Right",
         "fullName": "Timo Werner",
         "shortenedPosition":"RW"

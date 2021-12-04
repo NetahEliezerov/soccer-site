@@ -3,10 +3,8 @@
 .mainPlayersComponent {
     background-color: #FBFBFF;
     list-style-type: none;
-    position: fixed;
     margin: 0;
     padding: 0;
-    width: 19%;
     height: 100%;
     overflow: auto;
     border-right: 2px solid #EEEEF8;

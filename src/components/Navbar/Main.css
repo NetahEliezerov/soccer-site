@@ -3,10 +3,8 @@
 .Nav {
     background-color: #110E43;
     list-style-type: none;
-    position: fixed;
     margin: 0;
     padding: 0;
-    width: 8.5rem;
     height: 100%;
     overflow: auto;
 }
