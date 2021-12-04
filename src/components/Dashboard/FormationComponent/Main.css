@@ -2,6 +2,10 @@
     height: 100%;
 }
 
+.formation-comp {
+    height: 50vh;
+}
+
 .subProgressBar {
     height: 0.55em;
     background-color: #00F287;

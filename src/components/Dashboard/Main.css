@@ -7,7 +7,7 @@
 }
 
 .subComponent {
-    height: fit-content;
+    height: 35vh !important;
     background: #FFFFFF;
     border: 2px solid #EEEEF8;
     box-sizing: border-box;

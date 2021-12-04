@@ -40,7 +40,7 @@ const FormationComponent = (props) => {
 
     document.documentElement.style.setProperty('--w', `${props.teamWork[0].teamWork}%`)
     return (
-        <div className={`subComponent ${props.size}`}>
+        <div className={`subComponent formation-comp`}>
                 { !props.title && <h4 className="titleText">Tactics familiar with</h4> }
                 { props.title && <h4 className="titleText">{props.title}</h4> }
                 <div className="selectionsDiv">
