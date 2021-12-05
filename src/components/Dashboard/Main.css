@@ -7,7 +7,7 @@
 }
 
 .subComponent {
-    max-height: 32em !important;
+    height: 32vh !important;
     background: #FFFFFF;
     border: 2px solid #EEEEF8;
     box-sizing: border-box;

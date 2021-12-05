@@ -1,7 +1,7 @@
 .playerListItem {
     display: inline-flex;
     width: 100%;
-    height: 10%;
+    height: 10vh;
     background-color: #FBFBFF;
     vertical-align: middle;
     cursor: pointer;
@@ -11,7 +11,7 @@
 .playerListItemActive {
     display: inline-flex;
     width: 100%;
-    height: 10%;
+    height: 10vh;
     background-color: #ECECFF;
     vertical-align: middle;
     border-bottom: 2px solid #E9E9F3;

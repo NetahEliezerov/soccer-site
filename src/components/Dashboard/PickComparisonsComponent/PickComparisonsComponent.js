@@ -20,7 +20,7 @@ const CompareButton = (props) => {
 
 const PickComparisonsComponent = (props) => {
     return (
-        <div className='subComponent'>
+        <div className='subComponent' style={{height: '35.75vh'}}>
             <h1 className="titleText">Compare to current squad</h1>
             <TableContainer>
                 <Table sx={{ width: '100%' }} aria-label="simple table">
