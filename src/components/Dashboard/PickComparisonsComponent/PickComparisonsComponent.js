@@ -29,6 +29,8 @@ const PickComparisonsComponent = (props) => {
                             <TableCell><span className="tableTitles">Name</span></TableCell>
                             <TableCell><span className="tableTitles">Nationality</span></TableCell>
                             <TableCell></TableCell>
+                            <TableCell></TableCell>
+                            <TableCell></TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -41,7 +43,9 @@ const PickComparisonsComponent = (props) => {
                                     <img src={player.playerInfo.imageSrc} className='playerComparisonLogo' />
                                     <span className="tableValues">{player.playerInfo.fullName}</span>
                                 </TableCell>
-                                <TableCell><span className="tableValues"><img className="countryComparisonLogo" src={process.env.PUBLIC_URL + '/assets/german.png'} />{player.playerInfo.country}</span></TableCell>
+                                <TableCell><span className="tableValues"><img className="countryComparisonLogo" src={`https://flagcdn.com/80x60/${player.playerInfo.countryCode}.png`} />{player.playerInfo.country}</span></TableCell>
+                                <TableCell></TableCell>
+                                <TableCell></TableCell>
                                 <TableCell>
                                     {<CompareButton player={player} comparingPlayers={props.comparingPlayers} removePlayerFromComparison={props.removePlayerFromComparison} addPlayerToComparison={props.addPlayerToComparison}/>}
                                 </TableCell>

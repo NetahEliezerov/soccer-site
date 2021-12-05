@@ -3,7 +3,7 @@
 }
 
 .formation-comp {
-    height: 50vh;
+    height: 35.75vh;
 }
 
 .subProgressBar {
@@ -37,7 +37,9 @@
 
 .teamWork {
     width: 100%;
-    padding: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-top: -1.5vh;
 }
 
 .percentsOfProgressBar {

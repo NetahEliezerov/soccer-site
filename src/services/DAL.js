@@ -161,7 +161,7 @@ const players = [
         "city": "Stuttgart",
         "placeOfBirth": "Stuttgart, Germany",
         "mainland": "eu",
-        "positions": "Right wingH",
+        "positions": "Right wing",
         "height":"174",
         "countryCode":"de",
         "preferredFoot":"Right",
